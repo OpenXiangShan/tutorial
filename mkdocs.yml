@@ -1,0 +1,53 @@
+# doc for pdf plug-in: https://pypi.org/project/mkdocs-with-pdf/
+site_name: XiangShan Tutorial on HPCA 2025
+copyright: |
+  <div>XiangShan Documents are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</div>
+  <div>Copyright © 2025 The XiangShan Team, Beijing Institute of Open Source Chip</div>
+
+theme:
+  name: material
+  logo: figs/logo_title.svg
+  language: en
+  features:
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OpenXiangShan
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - abbr
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - def_list
+
+plugins:
+
+nav:
+  - Home: index.md

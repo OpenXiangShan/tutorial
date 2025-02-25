@@ -51,4 +51,6 @@ plugins:
 
 nav:
   - Home: index.md
+  - Start Up: StartUp.md
+  - Function Verification: FunctionVerification.md
   - Performance Verification: performance.md

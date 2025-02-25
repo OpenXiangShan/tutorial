@@ -51,3 +51,4 @@ plugins:
 
 nav:
   - Home: index.md
+  - Performance Verification: performance.md

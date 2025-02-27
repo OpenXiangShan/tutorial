@@ -94,7 +94,7 @@ make emu –j4
 
 ```shell
 # login to the cloud server again
-ssh guest@tutorial.xiangshan.cc
+ssh guest@t.xiangshan.cc
 # Password: xiangshan-2025
 
 # Enter your dir and set up

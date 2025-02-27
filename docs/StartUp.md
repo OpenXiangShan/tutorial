@@ -24,21 +24,14 @@ Login to the provided cloud server.
 
 **The server is only available during the tutorial.**
 
-For Windows (Windows Terminal / PowerShell is recommended):
+Please open a Terminal and run the following commands.
+
+* For Windows User, Windows Terminal with PowerShell is recommended
+* For Mac / Linux User, just open "Terminal".
 
 ```powershell
-ssh guest@tutorial.xiangshan.cc
+ssh guest@t.xiangshan.cc
 # Password: xiangshan-2025
-```
-
-For Linux / Mac:
-
-```shell
-ssh guest@tutorial.xiangshan.cc
-# Password: xiangshan-2025
-pwd
-# /home/guest
-
 ```
 
 For offline users, please refer to [https://github.com/OpenXiangShan/xs-env/tree/tutorial-new](https://github.com/OpenXiangShan/xs-env/tree/tutorial-new)

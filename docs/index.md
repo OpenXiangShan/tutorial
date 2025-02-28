@@ -8,10 +8,10 @@ We are going to host half-day tutorials on XiangShan and MinJie during HPCA'25 i
 
 | Time          | Topic                                       | Slides                   |
 | ------------- | ------------------------------------------- | ------------------------ |
-| 08:30 - 09:00 | Introduction of the XiangShan Project       | Available on 28 Feburary |
-| 09:00 - 10:00 | Microarchitecture Design and Implementation | Available on 28 Feburary |
+| 08:30 - 09:00 | Introduction of the XiangShan Project       | [slide](./slides/20250302-HPCA25-1-Introduction-XiangShan.pdf) |
+| 09:00 - 10:00 | Microarchitecture Design and Implementation | [slide](./slides/20250302-HPCA25-2-Microarchitecture.pdf) |
 | 10:00 - 10:30 | Coffee Break                                |                          |
-| 10:30 - 12:00 | Hands-on Development                        | Available on 28 Feburary |
+| 10:30 - 12:00 | Hands-on Development                        | [slide](./slides/20250302-HPCA25-3-Dev-Tools.pdf) |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 

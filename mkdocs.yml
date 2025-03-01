@@ -2,7 +2,7 @@
 site_name: XiangShan Tutorial on HPCA 2025
 copyright: |
   <div>XiangShan Documents are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</div>
-  <div>Copyright © 2025 The XiangShan Team, Beijing Institute of Open Source Chip</div>
+  <div>Copyright © 2025 The XiangShan Team</div>
 
 theme:
   name: material

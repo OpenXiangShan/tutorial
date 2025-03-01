@@ -1,6 +1,6 @@
 # Tutorials at HPCA'25
 
-We are going to host half-day tutorials on XiangShan and MinJie during HPCA'25 in Las Vegas, USA on March 2, 2024.
+We are going to host half-day tutorials on XiangShan and MinJie at **Room Cypress**, Westin Las Vegas **from 8:30am to 12:00am on March 2, 2025**.
 
 ## Agenda
 

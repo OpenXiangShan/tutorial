@@ -136,7 +136,7 @@ Please prepare a server with relatively high performance. The following are some
 * Disk space: 20G or more.
 * Network: Please configure a smooth network environment.
 
-For detailed steps, please refer to: https://docs.xiangshan.cc/zh-cn/latest/tools/xsenv/
+For detailed steps, please refer to: [xs-env](https://docs.xiangshan.cc/zh-cn/latest/tools/xsenv/)
 
 **Step 1:** clone the environment and install the tools.
 

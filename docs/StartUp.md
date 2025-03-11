@@ -129,7 +129,8 @@ Great! We have learned the basic simulation process of Xiangshan.
 If you want to build the Xiangshan environment on your own server, please refer to the following operations.
 
 Please prepare a server with relatively high performance. The following are some configuration requirements for the server:
-* Operating system: Ubuntu 22.04 LTS (Other versions have not been tested and are not recommended. **NOTE: ** the Xiangshan environment corresponding to Ubuntu 20.04 LTS is no longer maintained.)
+
+* Operating system: Ubuntu 22.04 LTS (Other versions have not been tested and are not recommended. **NOTE:** the Xiangshan environment corresponding to Ubuntu 20.04 LTS is no longer maintained.)
 * CPU: Not limited. The performance will determine the speed of compilation and generation.
 * Memory: At least 32G. 64G or more is recommended.
 * Disk space: 20G or more.

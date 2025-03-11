@@ -36,8 +36,6 @@ ssh guest@t.xiangshan.cc
 # Password: xiangshan-2025
 ```
 
-For offline users, please refer to [https://github.com/OpenXiangShan/xs-env/tree/tutorial-new](https://github.com/OpenXiangShan/xs-env/tree/tutorial-new)
-
 ```shell
 # Copy tutorial environment to your dir based on your name
 cp -r /opt/xs-env ~/<YOUR_NAME>

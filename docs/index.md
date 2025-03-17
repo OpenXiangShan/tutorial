@@ -1,17 +1,17 @@
-# Tutorials at HPCA'25
+# Tutorials at ASPLOS'25
 
-We are going to host half-day tutorials on XiangShan and MinJie at **Room Cypress**, Westin Las Vegas **from 8:30am to 12:00am on March 2, 2025**.
+We are going to host half-day tutorials on XiangShan and MinJie during the [ASPLOS'25](https://www.asplos-conference.org/asplos2025/workshops-and-tutorials/) conference at **Mees II**, Postillion Hotel and Convention Centre WTC Rotterdam, Netherlands, **from 14:00 to 17:30 on March 30, 2025**.
 
 ## Agenda
 
-**Time: Morning, Sunday, March 2**
+**Time: Afternoon, Sunday, March 30**
 
-| Time          | Topic                                       | Slides                   |
-| ------------- | ------------------------------------------- | ------------------------ |
-| 08:30 - 09:00 | Introduction of the XiangShan Project       | [slide](./slides/20250302-HPCA25-1-Introduction-XiangShan.pdf) |
-| 09:00 - 10:00 | Microarchitecture Design and Implementation | [slide](./slides/20250302-HPCA25-2-Microarchitecture.pdf) |
-| 10:00 - 10:30 | Coffee Break                                |                          |
-| 10:30 - 12:00 | Hands-on Development                        | [slide](./slides/20250302-HPCA25-3-Dev-Tools.pdf) |
+| Time          | Topic                                       | Slides                |
+| ------------- | ------------------------------------------- | ----------------------|
+| 14:00 - 14:30 | Introduction of the XiangShan Project       | Available on 29 March |
+| 14:30 - 15:30 | Microarchitecture Design and Implementation | Available on 29 March |
+| 15:30 - 16:00 | Coffee Break                                |                       |
+| 16:00 - 17:30 | Hands-on Development                        | Available on 29 March |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 
@@ -47,7 +47,7 @@ We will introduce the development infrastructure of XiangShan processor, also kn
 
 We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry.
 
-This tutorial's primary hands-on encompasses two parts: 
+This tutorial's primary hands-on encompasses two parts:
 
 - [Function Verification](FunctionVerification.md)
 

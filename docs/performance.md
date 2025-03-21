@@ -17,7 +17,7 @@ In this section, we will provide a demonstration of generating an agile test sui
 Step 0: Prepare NEMU environment for SimPoint checkpoint.
 
 ```
-cd ../p4-checkpoint && bash simpoint_step0-prepare.sh
+cd ../p4-checkpoint && bash simpoint_step0_prepare.sh
 ```
 
 ```
@@ -43,7 +43,7 @@ cd ../p4-checkpoint && bash simpoint_step0-prepare.sh
 Step 1: Execute the workload and collect program behavior.
 
 ```
-bash simpoint_step1-profiling.sh
+bash simpoint_step1_profiling.sh
 ```
 
 ```
@@ -195,7 +195,7 @@ Example:
 
 ```
 cd ../p5-xs-perf
-bash xs-perf-log.sh | head –n 20
+bash xs-perf-log.sh | head -n 20
 ```
 
 ```
@@ -219,7 +219,7 @@ Example:
 step 1: Build emu with rolling  (time consuming, use pre-built emu instead)
 
 ```
-bash xs-perf-prepare.sh
+# bash xs-perf-prepare.sh   # Build emu with rolling  (time consuming, use pre-built emu instead)
 ```
 
 ```
@@ -344,7 +344,11 @@ Then try the hands-on to pass constant via standard input stream
 
 ```
 cd ../p6-constantin
-bash step0-build.sh
+# bash step0-build.sh    # Build emu with constantin (time consuming, use pre-built emu instead)
+bash step1-basic.sh
+```
+
+```
 # please input total constant number
 2
 # please input each constant ([constant name] [value])
@@ -400,8 +404,8 @@ The following instructions give a simpile example to compile and build XS-Gem5:
 
 ```
 cd ../p7-xs-gem5 # Enter  XS-Gem5  tutorial directory
-bash 0-gem5_prepare.sh
-cd ~/pre/tutorial/p5-xs-gem5 && export gem5_home=`~/pre/gem5`
+# bash 0-gem5_prepare.sh   # ~8min, time consuming, use pre-built gem5 instead
+export gem5_home=~/gem5-pre/gem5 && cd ~/gem5-pre/tutorial/p7-xs-gem5 
 ```
 
 ### Run and analyze

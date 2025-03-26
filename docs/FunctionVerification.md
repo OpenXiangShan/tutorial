@@ -33,7 +33,7 @@ bash build-nemu.sh
 # cd $NEMU_HOME
 # make clean
 # make riscv64-xs_defconfig
-# make –j         build NEMU as the bare metal machine, can run the Coremark from the previous step
+# make -j         build NEMU as the bare metal machine, can run the Coremark from the previous step
 # make clean-softfloat
 # make riscv64-xs-ref_defconfig
 # make -j              build NEMU as the reference model for XiangShan
@@ -45,7 +45,7 @@ Run Coremark workload on NEMU.
 bash run-nemu.sh
 
 # cd $NEMU_HOME  
-# ./build/riscv64-nemu-interpreter –b \                              run in batch mode, faster
+# ./build/riscv64-nemu-interpreter -b \                              run in batch mode, faster
 # $AM_HOME/apps/coremark/build/coremark-1-iteration-riscv64-xs.bin   set workspace to Coremark
 ```
 
@@ -187,7 +187,7 @@ cd ../p2-chiseldb && cat cdb_err.patch
 # +      buffer(insertIdx)(count) := 0xABCDEF.U
 ```
 
-Run the command below you can simulate the pre-built emu. There is a new parameter `–dump-db` to dump the data base.
+Run the command below you can simulate the pre-built emu. There is a new parameter `-dump-db` to dump the data base.
 
 ```shell
 # simulate using pre-built emu (ChiselDB enabled)

@@ -34,7 +34,7 @@ cd ../p4-checkpoint && bash simpoint_step0_prepare.sh
 
 # cd $NEMU_HOME/resource/gcpt_restore
 # rm -rf $XS_PROJECT_ROOT/tutorial/part5-checkpoint/gcpt
-# make –C $NEMU_HOME/resource/gcpt_restore/ \	# generate gcpt restorer binary
+# make -C $NEMU_HOME/resource/gcpt_restore/ \	# generate gcpt restorer binary
   	O=$XS_PROJECT_ROOT/tutorial/part5-checkpoint/gcpt \ # directory of results
 	GCPT_PAYLOAD_PATH=$XS_PROJECT_ROOT/tutorial/part5-	checkpoint/bin/stream_100000.bin
 
@@ -50,7 +50,7 @@ bash simpoint_step1_profiling.sh
 # simpoint_step1_profiling.sh (~18s)
 # source simpoint_env.sh			# configure environment variables
 
-# rm –rf $RESULT
+# rm -rf $RESULT
 
 # $NEMU ${BBL_PATH}/${workload}.bin \  	# specify workload 
 #    -b                             \  	# run with batch mode
@@ -73,7 +73,7 @@ bash simpoint_step2_cluster.sh
 # simpoint_step2_cluster.sh
 
 # export CLUSTER=$RESULT/cluster/${workload} && mkdir -p $CLUSTER
-# mkdir –p $LOG_PATH/cluster_logs/cluster
+# mkdir -p $LOG_PATH/cluster_logs/cluster
 
 # random1=`head -20 /dev/urandom | cksum | cut -c 1-6`
 # random2=`head -20 /dev/urandom | cksum | cut -c 1-6`
@@ -103,7 +103,7 @@ bash simpoint_step3_genspt.sh
 # simpoint_step3_genspt.sh
 
 # export CLUSTER=$RESULT/cluster
-# mkdir –p $LOG_PATH/checkpoint_logs
+# mkdir -p $LOG_PATH/checkpoint_logs
 
 # $NEMU ${BBL_PATH}/${workload}.bin \
 #    -b                             \ run with batch mode
@@ -141,7 +141,7 @@ Step 5: Provide configuration files for batch running on Gem5/XiangShan.
 
 ```
 python3 simpoint_step5_dumpresult.py 
-ls –l simpoint_result/checkpoint
+ls -l simpoint_result/checkpoint
 ```
 
 ### Uniform Simpoint
@@ -171,7 +171,7 @@ bash uniform_run_nemu.sh
 
 After obtaining performance data, we mainly use three tools to conduct efficient performance analysis: **XSPerf**, **Costantin**, and **Top-Down**. 
 
-In this section, we will provide provide the setup process and a demonstration of performance analysis using the aforementioned three tools.
+In this section, we will provide the setup process and a demonstration of performance analysis using these three tools.
 
 ### XSPerf
 
@@ -374,7 +374,7 @@ Example:
 
 ```
 # Automatical parameter solver configuration file
-cat my_constantin.json 
+cat my_constantin.json
 ```
 
 Step 4: Run the script to find automatically

@@ -57,7 +57,7 @@ source env.sh
 
 ```shell
 # Project Structure
-tree –d –L 1
+tree -d -L 1
 # .  
 # ├── DRAMsim3
 # ├── gem5
@@ -79,7 +79,7 @@ cd XiangShan
 Compilation might take ~20 mins.
 
 ```shell
-make emu –j4
+make emu -j4
 
 # Options: 
 # CONFIG=MinimalConfig  Configuration of XiangShan

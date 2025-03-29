@@ -8,10 +8,10 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [ASPL
 
 | Time          | Topic                                       | Slides                |
 | ------------- | ------------------------------------------- | ----------------------|
-| 14:00 - 14:30 | Introduction of the XiangShan Project       | Available on 29 March |
-| 14:30 - 15:30 | Microarchitecture Design and Implementation | Available on 29 March |
+| 14:00 - 14:30 | Introduction of the XiangShan Project       |  [slide](./slides/20250330-ASPLOS25-1-Introduction-XiangShan.pdf)  |
+| 14:30 - 15:30 | Microarchitecture Design and Implementation |  [slide](./slides/20250330-ASPLOS25-2-Microarchitecture.pdf)  |
 | 15:30 - 16:00 | Coffee Break                                |                       |
-| 16:00 - 17:30 | Hands-on Development                        | Available on 29 March |
+| 16:00 - 17:30 | Hands-on Development                        |  [slide](./slides/20250330-ASPLOS25-3-Dev-Tools.pdf) |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 

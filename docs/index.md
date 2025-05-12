@@ -6,11 +6,13 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [RVSE
 
 **Time: Noon, Monday, May 12**
 
-| Time          | Topic                                       | Slides                |
-| ------------- | ------------------------------------------- | ----------------------|
-| 11:30 - 12:00 | Introduction of the XiangShan Project       |  [slide](./slides/20250512-RVSE2025-1-Introduction-XiangShan.pdf)  |
-| 12:00 - 12:30 | Microarchitecture Design and Implementation |  [slide](./slides/20250512-RVSE2025-2-Microarchitecture.pdf)  |
-| 12:30 - 13:00 | Hands-on Development                        |  [slide](./slides/20250512-RVSE2025-3-Dev-Tools.pdf) |
+| Time          | Topic                                       |
+| ------------- | ------------------------------------------- |
+| 11:30 - 12:00 | Introduction of the XiangShan Project       |
+| 12:00 - 12:30 | Microarchitecture Design and Implementation |
+| 12:30 - 13:00 | Hands-on Development                        |
+
+[slide](./slides/20250512-RVSE25-XiangShan-Tutorial.pdf)
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 

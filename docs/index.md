@@ -1,6 +1,6 @@
-# Tutorials at ASPLOS'25
+# Tutorials at RVSE'25
 
-We are going to host half-day tutorials on XiangShan and MinJie during the [ASPLOS'25](https://www.asplos-conference.org/asplos2025/workshops-and-tutorials/) conference at **Mees II**, Postillion Hotel and Convention Centre WTC Rotterdam, Netherlands, **from 14:00 to 17:30 on March 30, 2025**.
+We are going to host half-day tutorials on XiangShan and MinJie during the [RVSE'25](https://riscv-europe.org/summit/2025/) conference at **Mees II**, Postillion Hotel and Convention Centre WTC Rotterdam, Netherlands, **from 14:00 to 17:30 on March 30, 2025**.
 
 ## Agenda
 
@@ -8,10 +8,9 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [ASPL
 
 | Time          | Topic                                       | Slides                |
 | ------------- | ------------------------------------------- | ----------------------|
-| 14:00 - 14:30 | Introduction of the XiangShan Project       |  [slide](./slides/20250330-ASPLOS25-1-Introduction-XiangShan.pdf)  |
-| 14:30 - 15:30 | Microarchitecture Design and Implementation |  [slide](./slides/20250330-ASPLOS25-2-Microarchitecture.pdf)  |
-| 15:30 - 16:00 | Coffee Break                                |                       |
-| 16:00 - 17:30 | Hands-on Development                        |  [slide](./slides/20250330-ASPLOS25-3-Dev-Tools.pdf) |
+| 11:30 - 12:00 | Introduction of the XiangShan Project       |  [slide](./slides/20250512-RVSE2025-1-Introduction-XiangShan.pdf)  |
+| 12:00 - 12:30 | Microarchitecture Design and Implementation |  [slide](./slides/20250512-RVSE2025-2-Microarchitecture.pdf)  |
+| 12:30 - 13:00 | Hands-on Development                        |  [slide](./slides/20250512-RVSE2025-3-Dev-Tools.pdf) |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 

@@ -1,6 +1,6 @@
 # Tutorials at RVSE'25
 
-We are going to host half-day tutorials on XiangShan and MinJie during the [RVSE'25](https://riscv-europe.org/summit/2025/) conference at **Mees II**, Postillion Hotel and Convention Centre WTC Rotterdam, Netherlands, **from 14:00 to 17:30 on March 30, 2025**.
+We are going to host half-day tutorials on XiangShan and MinJie during the [RVSE'25](https://riscv-europe.org/summit/2025/) conference at **Louis Armand West**, La cité des sciences et de, Paris, France, **from 11:30 to 13:00 on May 12, 2025**.
 
 ## Agenda
 
@@ -49,5 +49,3 @@ We have established a comprehensive workflow to simulate XiangShan processor and
 This tutorial's primary hands-on encompasses two parts:
 
 - [Function Verification](FunctionVerification.md)
-
-- [Performance Analysis](performance.md)

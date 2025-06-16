@@ -1,16 +1,17 @@
-# Tutorials at RVSE'25
+# Tutorials at ISCA'25
 
-We are going to host half-day tutorials on XiangShan and MinJie during the [RVSE'25](https://riscv-europe.org/summit/2025/) conference at **Louis Armand West**, la Cité des sciences et de l'industrie, Paris, France, **from 11:30 to 13:00 on May 12, 2025**.
+We are going to host half-day tutorials on XiangShan and MinJie during the [ISCA'25](https://www.iscaconf.org/isca2025/) conference at **Waseda University**, Shinjuku, Tokyo, Japan, **from 14:00 to 18:00 on June 21, 2025**.
 
 ## Agenda
 
-**Time: Noon, Monday, May 12**
+**Time: Afternoon, Saturday, June 21**
 
 | Time          | Topic                                       |
 | ------------- | ------------------------------------------- |
-| 11:30 - 12:00 | Introduction of the XiangShan Project       |
-| 12:00 - 12:30 | Microarchitecture Design and Implementation |
-| 12:30 - 13:00 | Hands-on Development                        |
+| 14:00 - 14:30 | Introduction of the XiangShan Project |
+| 14:30 - 15:00 | Introduction to the XS-Gem5 simulator |
+| 15:00 - 16:00 | Microarchitecture Design and Implementation |
+| 16:30 - 18:00 | Hands-on Development |
 
 [slide](./slides/20250512-RVSE25-XiangShan-Tutorial.pdf)
 

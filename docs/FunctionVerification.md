@@ -124,8 +124,8 @@ Here is an example, call this API function, you can create a chiselDB table and 
 import huancun.utils.ChiselDB
 
 class MyBundle extends Bundle { 
-	val fieldA = UInt(10.W)
-	val fieldB = UInt(20.W) 
+  val fieldA = UInt(10.W)
+  val fieldB = UInt(20.W) 
 } 
 val table = ChiselDB.createTable("MyTableName", new MyBundle)
 
@@ -165,7 +165,7 @@ L2TlbMissQueueInDB.vpn := missQueue.io.in.bits.vpn
 L2TlbMissQueueOutDB.vpn := missQueue.io.out.bits.vpn
 
 val L2TlbMissQueueTable = ChiselDB.createTable(
-	"L2TlbMissQueue_hart" + p(XSCoreParamsKey).HartId.toString, new L2TlbMissQueueDB)
+  "L2TlbMissQueue_hart" + p(XSCoreParamsKey).HartId.toString, new L2TlbMissQueueDB)
 
 L2TlbMissQueueTable.log(L2TlbMissQueueInDB, missQueue.io.in.fire, "L2TlbMissQueueIn", clock, reset)
 L2TlbMissQueueTable.log(L2TlbMissQueueOutDB, missQueue.io.out.fire, "L2TlbMissQueueOut", clock, reset)

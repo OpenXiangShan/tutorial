@@ -1,6 +1,6 @@
 # MinJie Performance Verification
 
-The performance verification of Minjie is a crucial part in processor development. Similar to Functional Verification, we have established a cycle consisting of RTL implementation, test running, performance evaluation, performance analysis, and then implement improvements. 
+The performance verification of Minjie is a crucial part in processor development. Similar to Functional Verification, we have established a cycle consisting of RTL implementation, test running, performance evaluation, performance analysis, and then implement improvements.
 
 In this section, we will provide a demonstration of the performance evaluation.
 
@@ -16,60 +16,60 @@ In this section, we will provide a demonstration of generating an agile test sui
 
 Step 0: Prepare NEMU environment for SimPoint checkpoint.
 
-```
+```bash
 cd ../p4-checkpoint && bash simpoint_step0_prepare.sh
 ```
 
-```
+```bash
 # simpoint_step0_prepare.sh (~23s)
 
 # cd $NEMU_HOME
 # git submodule update --init
 # cd $NEMU_HOME/resource/simpoint/simpoint_repo
-# make clean && make		# generate simpoint generator binary
+# make clean && make    # generate simpoint generator binary
  
 # cd $NEMU_HOME
 # make clean
-# make riscv64-xs-cpt_defconfig && make -j 8	# compile NEMU
+# make riscv64-xs-cpt_defconfig && make -j 8  # compile NEMU
 
 # cd $NEMU_HOME/resource/gcpt_restore
 # rm -rf $XS_PROJECT_ROOT/tutorial/part5-checkpoint/gcpt
-# make -C $NEMU_HOME/resource/gcpt_restore/ \	# generate gcpt restorer binary
-  	O=$XS_PROJECT_ROOT/tutorial/part5-checkpoint/gcpt \ # directory of results
-	GCPT_PAYLOAD_PATH=$XS_PROJECT_ROOT/tutorial/part5-	checkpoint/bin/stream_100000.bin
+# make -C $NEMU_HOME/resource/gcpt_restore/ # generate gcpt restorer binary
+    O=$XS_PROJECT_ROOT/tutorial/part5-checkpoint/gcpt \ # directory of results
+  GCPT_PAYLOAD_PATH=$XS_PROJECT_ROOT/tutorial/part5-checkpoint/bin/stream_100000.bin
 
 ```
 
 Step 1: Execute the workload and collect program behavior.
 
-```
+```bash
 bash simpoint_step1_profiling.sh
 ```
 
-```
+```bash
 # simpoint_step1_profiling.sh (~18s)
-# source simpoint_env.sh			# configure environment variables
+# source simpoint_env.sh      # configure environment variables
 
 # rm -rf $RESULT
 
-# $NEMU ${BBL_PATH}/${workload}.bin \  	# specify workload 
-#    -b                             \  	# run with batch mode
-#    -D $RESULT                     \  	# directory where the checkpoint is generated
-#    -C $profiling_result_name      \  	# name of this task
-#    -w stream                      \  	# name of workload
-#    --simpoint-profile             \  	# is simpoint profiling
-#    --cpt-interval ${interval}     \  	# simpoint interval instructions: 50,000,000
+# $NEMU ${BBL_PATH}/${workload}.bin \    # specify workload 
+#    -b                             \    # run with batch mode
+#    -D $RESULT                     \    # directory where the checkpoint is generated
+#    -C $profiling_result_name      \    # name of this task
+#    -w stream                      \    # name of workload
+#    --simpoint-profile             \    # is simpoint profiling
+#    --cpt-interval ${interval}     \    # simpoint interval instructions: 50,000,000
 #    > >(tee $log/stream-out.txt) 2> >(tee ${log}/stream-err.txt) # redirect stdout and stderr
 
 ```
 
 Step 2: Cluster and obtain multiple representative slices.
 
-```
+```bash
 bash simpoint_step2_cluster.sh
 ```
 
-```
+```bash
 # simpoint_step2_cluster.sh
 
 # export CLUSTER=$RESULT/cluster/${workload} && mkdir -p $CLUSTER
@@ -89,17 +89,17 @@ bash simpoint_step2_cluster.sh
 #    -seedkm ${random1}     \  # random seed for choosing initial k-means centers
 #    -seedproj ${random2}   \  # random seed for random linear projection
 #    > >(tee $log/${workload}-out.txt) 2> >(tee $log/${workload}-err.txt) 
-			        # redirect stdout and stderr
+              # redirect stdout and stderr
 
 ```
 
 Step 3: Generate corresponding Checkpoints based on clustering results.
 
-```
+```bash
 bash simpoint_step3_genspt.sh
 ```
 
-```
+```bash
 # simpoint_step3_genspt.sh
 
 # export CLUSTER=$RESULT/cluster
@@ -112,26 +112,25 @@ bash simpoint_step3_genspt.sh
 #    -w stream                      \ name of workload
 #    -S $CLUSTER                    \ simpoints results director
 #    --cpt-interval $interval       \ simpoint interval instructions: 50,000,000
-#    > >(tee $log/stream-out.txt) 2> >(tee $log/stream-err.txt)					    redirect stdout and stderr
+#    > >(tee $log/stream-out.txt) 2> >(tee $log/stream-err.txt)    redirect stdout and stderr
 
 ```
-
 
 Step 4: Run the SimPoint checkpoint on NEMU or XiangShan.
 
 Here we take XiangShan as an example.
 
-```
+```bash
 bash simpoint_step4_run_xs.sh
 ```
 
-```
-# simpoint_step4_run_xs.sh (~ 1 min)
+```bash
+# simpoint_step4_run_xs.sh (~ 1 min)
 # ./emu \
 #    -i `find $RESULT/checkpoint/stream -type f -name "*_.gz" | tail -1` \
-				 get the path of workload
+         get the path of workload
 #   --diff $NOOP_HOME/ready-to-run/riscv64-nemu-interpreter-so \
-				Enable the reference standard design path for difftest
+         Enable the reference standard design path for difftest
 #   --max-cycles=50000 \     Maximum execution instruction count
 #   2>simpoint.err
 
@@ -139,7 +138,7 @@ bash simpoint_step4_run_xs.sh
 
 Step 5: Provide configuration files for batch running on Gem5/XiangShan.
 
-```
+```bash
 python3 simpoint_step5_dumpresult.py 
 ls -l simpoint_result/checkpoint
 ```
@@ -148,34 +147,34 @@ ls -l simpoint_result/checkpoint
 
 Step 0: Prepare NEMU environment for checkpoints.
 
-```
+```bash
 cd $XS_PROJECT_ROOT/tutorial/p4-checkpoint 
 bash simpoint_step0_prepare.sh
 ```
 
 Step 1: Generate uniform checkpointsusing NEMU.
 
-```
+```bash
 bash uniform_cpt.sh
 ```
 
 Step 2: Run uniform checkpoint on NEMU or XiangShan.
 
-Taking NEMU as an example
+Taking XiangShan as an example
 
-```
-bash uniform_run_nemu.sh
+```bash
+bash uniform_run_xs.sh
 ```
 
 ## Performance Analysis
 
-After obtaining performance data, we mainly use three tools to conduct efficient performance analysis: **XSPerf**, **Costantin**, and **Top-Down**. 
+After obtaining performance data, we mainly use three tools to conduct efficient performance analysis: **XSPerf**, **Costantin**, and **Top-Down**.
 
 In this section, we will provide the setup process and a demonstration of performance analysis using these three tools.
 
 ### XSPerf
 
-XSPerf is a performance analysis tool based on chiselDB, used for specific performance data and visualization processing. 
+XSPerf is a performance analysis tool based on chiselDB, used for specific performance data and visualization processing.
 
 It provides three data processing modes: accumulation, histogram, and rolling.
 
@@ -187,18 +186,18 @@ Histogram is counting the distrbution.
 
 How to use:
 
-add `XSPerfAccumulate(‘name’, signal) or XSPerfHistogram(‘name’, signal)  .`
+add `XSPerfAccumulate(‘name’, signal) or XSPerfHistogram(‘name’, signal)`.
 
-set `DebugOptions(EnablePerfDebug = false/true) `to turn off/on.
+set `DebugOptions(EnablePerfDebug = false/true)`to turn off/on.
 
 Example:
 
-```
+```bash
 cd ../p5-xs-perf
 bash xs-perf-log.sh | head -n 20
 ```
 
-```
+```bash
 # print the log result of p1-basic-func
 # cat ${XS_PROJECT_ROOT}/tutorial/p1-basic-func/perf.err
 
@@ -210,7 +209,7 @@ Rolling is an advanced data processsing mode to roll curve colleciton and visual
 
 How to use:
 
-add ` XSPerfRolling(‘name’, perfCnt, granularity, clock, reset.`
+add `XSPerfRolling(‘name’, perfCnt, granularity, clock, reset`.
 
 compile with option `WITH_CHISELDB=1 WITH_ROLLINGDB=1` and run with option `--dump-db`
 
@@ -218,11 +217,11 @@ Example:
 
 step 1: Build emu with rolling  (time consuming, use pre-built emu instead)
 
-```
+```bash
 # bash xs-perf-prepare.sh   # Build emu with rolling  (time consuming, use pre-built emu instead)
 ```
 
-```
+```bash
 # cd ${NOOP_HOME}
 # make clean
 # make emu EMU_THREADS=4 WITH_CHISELDB=1 WITH_ROLLINGDB=1 -j8 \
@@ -237,11 +236,11 @@ step 1: Build emu with rolling  (time consuming, use pre-built emu instead)
 
 step 2: check the results and plot the curve of performance segments
 
-```
+```bash
 bash xs-perf-rolling.sh
 ```
 
-```
+```bash
 # cd ${NOOP_HOME}/scripts/rolling
 # python3 rollingplot.py ${XS_PROJECT_ROOT}/tutorial/p6-xs-perf/XsPerfRolling-test.db ipc
 # ls ${NOOP_HOME}/scripts/rolling/results
@@ -251,9 +250,9 @@ perf.png
 
 ### Top-Down
 
-Top-Down is a hierarchical performance analysis and optimization method, widely used in efficient performance evaluation processes. 
+Top-Down is a hierarchical performance analysis and optimization method, widely used in efficient performance evaluation processes.
 
-We have applied the Top-Down framework in both XS-Gem5 and RTL, and optimized configurations specifically for the RISC-V instruction set, including performance counter optimization. 
+We have applied the Top-Down framework in both XS-Gem5 and RTL, and optimized configurations specifically for the RISC-V instruction set, including performance counter optimization.
 
 In this section, we will provide the setup process for Top-Down and a demonstration of agile performance analysis using the Top-Down approach.
 
@@ -263,8 +262,8 @@ Step 1 : setting performance Counters in RTL code:
 
 Example:
 
-```
-# XiangShan/src/main/scala/xiangshan/backend/dispatch/Dispatch.scala
+```scala
+// XiangShan/src/main/scala/xiangshan/backend/dispatch/Dispatch.scala
 
 val stallReason = Wire(chiselTypeOf(io.stallReason.reason))
 // ...
@@ -280,7 +279,7 @@ Step3 : Analyze the performance counter data through Top-Down method
 
 Example:
 
-```
+```python
 # XiangShan/scripts/top-down/configs.py
 
 xs_coarse_rename_map = {
@@ -296,11 +295,11 @@ Step 4: Obtain analysis results and make targeted optimizations
 
 Then try the hands-on to analyze the congestion causes in RTL using the Top-Down tool.
 
-```
+```bash
 bash rtl-top-down.sh
 ```
 
-```
+```bash
 # cd ${NOOP_HOME}/scripts/top-down && \
   python3 top_down.py \
   -s /opt/SPEC06_EmuTasks_topdown \    #path of performance counter results
@@ -320,8 +319,9 @@ In this section, we will provide the setup process for ConstantIn and a demonstr
 
 Here is the example to create constant by the API:
 
-```
-# XiangShan/coupledL2/src/main/scala/coupledL2/prefetch/TemporalPrefetch.scala
+```scala
+// XiangShan/coupledL2/src/main/scala/coupledL2/prefetch/TemporalPrefetch.scala
+
 require(cacheParams.hartIds.size == 1)
 val hartid = cacheParams.hartIds.head
 // 0 / 1: whether to enable temporal prefetcher
@@ -342,13 +342,13 @@ private val trainOnL1PF = WireInit(Constantin.createRecord("tp_trainOnL1PF" + ha
 
 Then try the hands-on to pass constant via standard input stream
 
-```
+```bash
 cd ../p6-constantin
 # bash step0-build.sh    # Build emu with constantin (time consuming, use pre-built emu instead)
 bash step1-basic.sh
 ```
 
-```
+```bash
 # please input total constant number
 2
 # please input each constant ([constant name] [value])
@@ -372,19 +372,19 @@ Step 3: Set parameters for `AutoSolvingin` a configuration file
 
 Example:
 
-```
+```bash
 # Automatical parameter solver configuration file
 cat my_constantin.json
 ```
 
 Step 4: Run the script to find automatically
 
-```
+```bash
 # Run auto solver, output will be the optimal constant currently found
 bash step2-solve.sh
 ```
 
-```
+```bash
 # ～2min
 # The solver generates optimal parameters
 # opt constant in this round is  [['DelayQueueLatencyvbop', 8], ['DelayQueueLatencypbop', 72]]  fitness is  54674
@@ -402,7 +402,7 @@ In this section, we will provide a demonstration of performance simulation using
 
 The following instructions give a simpile example to compile and build XS-Gem5:
 
-```
+```bash
 cd ../p7-xs-gem5 # Enter  XS-Gem5  tutorial directory
 # bash 0-gem5_prepare.sh   # ~8min, time consuming, use pre-built gem5 instead
 export gem5_home=~/gem5-pre/gem5 && cd ~/gem5-pre/tutorial/p7-xs-gem5 
@@ -412,11 +412,11 @@ export gem5_home=~/gem5-pre/gem5 && cd ~/gem5-pre/tutorial/p7-xs-gem5
 
 Step 1 run bare-metal workload on XS-Gem5
 
-```
+```bash
 bash 1-gem5_run_coremark.sh
 ```
 
-```
+```bash
 # pushd $gem5_home && \
 # export GCBV_REF_SO=$NEMU_HOME/build/riscv64-nemu-gem5-ref-so && \
 # mkdir -p util/xs_scripts/coremark && \ # Setup CoreMark working directory
@@ -429,21 +429,35 @@ bash 1-gem5_run_coremark.sh
 
 Step 2 analyze the performance counters
 
-```
+```bash
 bash 2-gem5_counter.sh | head -n 20
 ```
 
-```
+```bash
 cat $gem5_home/util/xs_scripts/coremark/m5out/stats.txt
 ```
 
-Step 3 run the Cache MPKI analysis script
+Step 3 run the Top-Down analysis script
 
-```
-bash 3-gem5_cache.sh
+```bash
+bash 3-gem5_topdown.sh
 ```
 
+```bash
+# pushd gem5_data_proc && \
+# python3 batch.py \
+# -s $gem5_home/util/xs_scripts/coremark \
+# -t --topdown-raw && \
+# popd
 ```
+
+Step 4 run the Cache MPKI analysis script
+
+```bash
+bash 4-gem5_cache.sh
+```
+
+```bash
 # pushd gem5_data_proc && \
 # mkdir -p results && \
 # export PYTHONPATH= pwd && \
@@ -458,27 +472,13 @@ bash 3-gem5_cache.sh
 
 ```
 
-Step 4 run the Top-Down analysis script
-
-```
-bash 4-gem_topdown.sh
-```
-
-```
-# pushd gem5_data_proc && \
-# python3 batch.py \
-# -s $gem5_home/util/xs_scripts/coremark \
-# -t --topdown-raw && \
-# popd
-```
-
 Step 5 run the SPEC CPU score calculation script
 
-```
+```bash
 bash 5-gem5_spec06_score.sh
 ```
 
-```
+```bash
 # pushd gem5_data_proc && \
 # mkdir -p results && \
 # export PYTHONPATH= pwd && \

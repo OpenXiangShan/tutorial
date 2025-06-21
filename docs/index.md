@@ -8,14 +8,12 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [ISCA
 
 **Location: Room 114, B1, [Building 121](https://maps.app.goo.gl/uLU5pBNpTp3p5ppA6)**
 
-| Time          | Topic                                       |
-| ------------- | ------------------------------------------- |
-| 14:00 - 14:30 | Introduction of the XiangShan Project |
-| 14:30 - 15:00 | Introduction to the XS-Gem5 simulator |
-| 15:00 - 16:00 | Microarchitecture Design and Implementation |
-| 16:30 - 18:00 | Hands-on Development |
-
-[slide](./slides/20250512-RVSE25-XiangShan-Tutorial.pdf)
+| Time          | Topic                                       | Slides |
+| ------------- | ------------------------------------------- | ------ |
+| 14:00 - 14:30 | Introduction of the XiangShan Project | [slides](./slides/20250621-ISCA25-1-Introduction-XiangShan.pdf) |
+| 14:30 - 15:00 | Introduction to the XS-Gem5 simulator | [slides](./slides/20250621-ISCA25-2-GEM5.pdf) |
+| 15:00 - 16:00 | Microarchitecture Design and Implementation | [slides](./slides/20250621-ISCA25-3-Microarchitecture.pdf) |
+| 16:30 - 18:00 | Hands-on Development | [slides](./slides/20250621-ISCA25-4-Dev-Tools.pdf) |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 

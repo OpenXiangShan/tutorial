@@ -6,6 +6,8 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [ISCA
 
 **Time: Afternoon, Saturday, June 21**
 
+**Location: Room 114, B1, [Building 121](https://maps.app.goo.gl/uLU5pBNpTp3p5ppA6)**
+
 | Time          | Topic                                       |
 | ------------- | ------------------------------------------- |
 | 14:00 - 14:30 | Introduction of the XiangShan Project |
@@ -53,4 +55,7 @@ We will introduce the development infrastructure of XiangShan processor, also kn
 
 We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry.
 
-This tutorial's primary hands-on encompasses [Function Verification](FunctionVerification.md). If you want to know more about performance exploration, see also: [Performance Verification](performance.md).
+This tutorial's primary hands-on encompasses two parts:
+
+- [Function Verification](FunctionVerification.md)
+- [Performance Verification](performance.md).

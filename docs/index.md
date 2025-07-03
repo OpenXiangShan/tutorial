@@ -1,19 +1,22 @@
-# Tutorials at ISCA'25
+# Tutorials at APPT'25
 
-We are going to host half-day tutorials on XiangShan and MinJie during the [ISCA'25](https://www.iscaconf.org/isca2025/) conference at **Waseda University**, Shinjuku, Tokyo, Japan, **from 14:00 to 18:00 on June 21, 2025**.
+We are going to host half-day tutorials on XiangShan and MinJie during the [APPT'25](https://www.appt-conference.com/) conference at **Athenaeum Intercontinental hotel**, Athens, Greece, **from 9:45 to 12:30 on July 14, 2025**.
+
+
+<!-- TODO: Add one sentence intro for RVSC2025 and its link -->
 
 ## Agenda
 
-**Time: Afternoon, Saturday, June 21**
+**Time: Morning, Monday, July 14**
 
-**Location: Room 114, B1, [Building 121](https://maps.app.goo.gl/uLU5pBNpTp3p5ppA6)**
+**Location: TBD, [Athenaeum Intercontinental hotel, Athens, Greece](https://maps.google.com/?cid=8198452727479242910&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ)**
 
 | Time          | Topic                                       | Slides |
 | ------------- | ------------------------------------------- | ------ |
-| 14:00 - 14:30 | Introduction of the XiangShan Project | [slides](./slides/20250621-ISCA25-1-Introduction-XiangShan.pdf) |
-| 14:30 - 15:00 | Introduction to the XS-Gem5 simulator | [slides](./slides/20250621-ISCA25-2-GEM5.pdf) |
-| 15:00 - 16:00 | Microarchitecture Design and Implementation | [slides](./slides/20250621-ISCA25-3-Microarchitecture.pdf) |
-| 16:30 - 18:00 | Hands-on Development | [slides](./slides/20250621-ISCA25-4-Dev-Tools.pdf) |
+| 09:45 - 10:20 | Introduction of the XiangShan Project | TBD |
+| 10:20 - 10:50 | Introduction to the XS-Gem5 simulator | TBD |
+| 11:15 - 11:35 | Brief Introduction of Microarchitecture Design | TBD |
+| 11:35 - 12:30 | XiangShan Development Tools | TBD |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 
@@ -29,7 +32,7 @@ The major goal of the tutorial is to demonstrate how the XiangShan project can m
 
 Target audience includes researchers on architecture design, agile development, etc.
 
-We provide a quick-start environment for Xiangshan. See [StartUp](StartUp.md) page for details.
+<!-- We provide a quick-start environment for Xiangshan. See [StartUp](StartUp.md) page for details. -->
 
 ## To be covered
 
@@ -41,7 +44,7 @@ In June 2020, we launched XiangShan project. We have developed two major generat
 
 XS-GEM5 is an architecture simulator calibrated against the XiangShan RTL architecture, built on top of the open-source GEM5 framework. It supports full-system (FS) simulation and enables fast performance evaluation using RVGCpt. It enables us to perform fast design space exploration and parameter optimization of the XiangShan processor. We will also show an example of quickly adding a new feature to it.
 
-- Introduction to the microarchitecture and design concepts of XiangShan processor
+- Brief introduction to the microarchitecture and design concepts of XiangShan processor
 
 XiangShan is a superscalar out-of-order RISC-V processor with RV64GCBK ISA support. Vector and Hypervisor extensions are to be supported in the 3rd generation KMH. It features high-throughput frontend with advanced branch predictor, six-way aggressive out-of-order execution engine, high-bandwidth load/store unit and highly configurable cache system. Written in Chisel, a high-level hardware description language, XiangShan also achieves high readability and maintainability.
 
@@ -49,11 +52,11 @@ XiangShan is a superscalar out-of-order RISC-V processor with RV64GCBK ISA suppo
 
 We will introduce the development infrastructure of XiangShan processor, also known as the MinJie platform. MinJie is open sourced as well. It includes a series of tools that can accelerate the process of hardware development, functional verification, and performance evaluation. We will first talk about the principles and instructions of MinJie toolsets, and then demonstrate how to employ these tools to help quickly develop XiangShan processor.
 
-- Hands-on development with typical use cases on XiangShan and MinJie
+<!-- - Hands-on development with typical use cases on XiangShan and MinJie -->
 
-We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry.
+<!-- We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry. -->
 
-This tutorial's primary hands-on encompasses two parts:
+<!-- This tutorial's primary hands-on encompasses two parts: -->
 
-- [Function Verification](FunctionVerification.md)
-- [Performance Verification](performance.md).
+<!-- - [Function Verification](FunctionVerification.md) -->
+<!-- - [Performance Verification](performance.md). -->

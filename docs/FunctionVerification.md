@@ -44,7 +44,7 @@ Run Coremark workload on NEMU.
 ```shell
 bash run-nemu.sh
 
-# cd $NEMU_HOME  
+# cd $NEMU_HOME
 # ./build/riscv64-nemu-interpreter -b \                              run in batch mode, faster
 # $AM_HOME/apps/coremark/build/coremark-1-iteration-riscv64-xs.bin   set workspace to Coremark
 ```
@@ -273,3 +273,5 @@ bash tltest_step2_analyze.sh
 
 # grep “addr: 0x4000” $TLT_HOME/run/tltest_v3lt.log
 ```
+
+Next step: [Performance Verification](performance.md)

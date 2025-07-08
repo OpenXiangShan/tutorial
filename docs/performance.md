@@ -14,7 +14,7 @@ In this section, we will provide a demonstration of generating an agile test sui
 
 ### Simpoint Checkpoint
 
-Step 0: Prepare NEMU environment for SimPoint checkpoint.
+**Step 0**: Prepare NEMU environment for SimPoint checkpoint.
 
 ```bash
 cd ../p4-checkpoint && bash simpoint_step0_prepare.sh
@@ -27,7 +27,7 @@ cd ../p4-checkpoint && bash simpoint_step0_prepare.sh
 # git submodule update --init
 # cd $NEMU_HOME/resource/simpoint/simpoint_repo
 # make clean && make    # generate simpoint generator binary
- 
+
 # cd $NEMU_HOME
 # make clean
 # make riscv64-xs-cpt_defconfig && make -j 8  # compile NEMU
@@ -40,7 +40,7 @@ cd ../p4-checkpoint && bash simpoint_step0_prepare.sh
 
 ```
 
-Step 1: Execute the workload and collect program behavior.
+**Step 1**: Execute the workload and collect program behavior.
 
 ```bash
 bash simpoint_step1_profiling.sh
@@ -52,7 +52,7 @@ bash simpoint_step1_profiling.sh
 
 # rm -rf $RESULT
 
-# $NEMU ${BBL_PATH}/${workload}.bin \    # specify workload 
+# $NEMU ${BBL_PATH}/${workload}.bin \    # specify workload
 #    -b                             \    # run with batch mode
 #    -D $RESULT                     \    # directory where the checkpoint is generated
 #    -C $profiling_result_name      \    # name of this task
@@ -63,7 +63,7 @@ bash simpoint_step1_profiling.sh
 
 ```
 
-Step 2: Cluster and obtain multiple representative slices.
+**Step 2**: Cluster and obtain multiple representative slices.
 
 ```bash
 bash simpoint_step2_cluster.sh
@@ -88,12 +88,12 @@ bash simpoint_step2_cluster.sh
 #    -iters 1000            \  # maximum number of iterations that should perform
 #    -seedkm ${random1}     \  # random seed for choosing initial k-means centers
 #    -seedproj ${random2}   \  # random seed for random linear projection
-#    > >(tee $log/${workload}-out.txt) 2> >(tee $log/${workload}-err.txt) 
+#    > >(tee $log/${workload}-out.txt) 2> >(tee $log/${workload}-err.txt)
               # redirect stdout and stderr
 
 ```
 
-Step 3: Generate corresponding Checkpoints based on clustering results.
+**Step 3**: Generate corresponding Checkpoints based on clustering results.
 
 ```bash
 bash simpoint_step3_genspt.sh
@@ -116,7 +116,7 @@ bash simpoint_step3_genspt.sh
 
 ```
 
-Step 4: Run the SimPoint checkpoint on NEMU or XiangShan.
+**Step 4**: Run the SimPoint checkpoint on NEMU or XiangShan.
 
 Here we take XiangShan as an example.
 
@@ -136,29 +136,29 @@ bash simpoint_step4_run_xs.sh
 
 ```
 
-Step 5: Provide configuration files for batch running on Gem5/XiangShan.
+**Step 5**: Provide configuration files for batch running on Gem5/XiangShan.
 
 ```bash
-python3 simpoint_step5_dumpresult.py 
+python3 simpoint_step5_dumpresult.py
 ls -l simpoint_result/checkpoint
 ```
 
 ### Uniform Simpoint
 
-Step 0: Prepare NEMU environment for checkpoints.
+**Step 0**: Prepare NEMU environment for checkpoints.
 
 ```bash
-cd $XS_PROJECT_ROOT/tutorial/p4-checkpoint 
+cd $XS_PROJECT_ROOT/tutorial/p4-checkpoint
 bash simpoint_step0_prepare.sh
 ```
 
-Step 1: Generate uniform checkpointsusing NEMU.
+**Step 1**: Generate uniform checkpointsusing NEMU.
 
 ```bash
 bash uniform_cpt.sh
 ```
 
-Step 2: Run uniform checkpoint on NEMU or XiangShan.
+**Step 2**: Run uniform checkpoint on NEMU or XiangShan.
 
 Taking XiangShan as an example
 
@@ -215,7 +215,7 @@ compile with option `WITH_CHISELDB=1 WITH_ROLLINGDB=1` and run with option `--du
 
 Example:
 
-step 1: Build emu with rolling  (time consuming, use pre-built emu instead)
+**Step 1**: Build emu with rolling  (time consuming, use pre-built emu instead)
 
 ```bash
 # bash xs-perf-prepare.sh   # Build emu with rolling  (time consuming, use pre-built emu instead)
@@ -234,7 +234,7 @@ step 1: Build emu with rolling  (time consuming, use pre-built emu instead)
 
 ```
 
-step 2: check the results and plot the curve of performance segments
+**Step 2**: check the results and plot the curve of performance segments
 
 ```bash
 bash xs-perf-rolling.sh
@@ -258,7 +258,7 @@ In this section, we will provide the setup process for Top-Down and a demonstrat
 
 Here is the Top-Down Performance Counter Setup Process:
 
-Step 1 : setting performance Counters in RTL code:
+**Step 1**: setting performance Counters in RTL code:
 
 Example:
 
@@ -273,9 +273,9 @@ TopDownCounters.values.foreach(ctr =>
 
 ```
 
-Step2 : do simulation to collect performance counter data
+**Step2**: do simulation to collect performance counter data
 
-Step3 : Analyze the performance counter data through Top-Down method
+**Step3**: Analyze the performance counter data through Top-Down method
 
 Example:
 
@@ -291,7 +291,7 @@ xs_coarse_rename_map = {
 
 ```
 
-Step 4: Obtain analysis results and make targeted optimizations
+**Step 4**: Obtain analysis results and make targeted optimizations
 
 Then try the hands-on to analyze the congestion causes in RTL using the Top-Down tool.
 
@@ -362,13 +362,13 @@ ConstantIn also supports the auto-solving feature, which is used to automaticall
 
 Here is the set-up process of autosolving:
 
-Step 0: Enable `AutoSolving` & prepare signals (like Basic Use) you need
+**Step 0**: Enable `AutoSolving` & prepare signals (like Basic Use) you need
 
-Step 1: Compile the emu with `WITH_CONSTANTIN=1`
+**Step 1**: Compile the emu with `WITH_CONSTANTIN=1`
 
-Step 2: Run basic demonstration
+**Step 2**: Run basic demonstration
 
-Step 3: Set parameters for `AutoSolvingin` a configuration file
+**Step 3**: Set parameters for `AutoSolvingin` a configuration file
 
 Example:
 
@@ -377,7 +377,7 @@ Example:
 cat my_constantin.json
 ```
 
-Step 4: Run the script to find automatically
+**Step 4**: Run the script to find automatically
 
 ```bash
 # Run auto solver, output will be the optimal constant currently found
@@ -405,12 +405,12 @@ The following instructions give a simpile example to compile and build XS-Gem5:
 ```bash
 cd ../p7-xs-gem5 # Enter  XS-Gem5  tutorial directory
 # bash 0-gem5_prepare.sh   # ~8min, time consuming, use pre-built gem5 instead
-export gem5_home=~/gem5-pre/gem5 && cd ~/gem5-pre/tutorial/p7-xs-gem5 
+export gem5_home=~/gem5-pre/gem5 && cd ~/gem5-pre/tutorial/p7-xs-gem5
 ```
 
 ### Run and analyze
 
-Step 1 run bare-metal workload on XS-Gem5
+**Step 1**: run bare-metal workload on XS-Gem5
 
 ```bash
 bash 1-gem5_run_coremark.sh
@@ -427,7 +427,7 @@ bash 1-gem5_run_coremark.sh
 # popd
 ```
 
-Step 2 analyze the performance counters
+**Step 2**: analyze the performance counters
 
 ```bash
 bash 2-gem5_counter.sh | head -n 20
@@ -437,7 +437,7 @@ bash 2-gem5_counter.sh | head -n 20
 cat $gem5_home/util/xs_scripts/coremark/m5out/stats.txt
 ```
 
-Step 3 run the Top-Down analysis script
+**Step 3**: run the Top-Down analysis script
 
 ```bash
 bash 3-gem5_topdown.sh
@@ -451,7 +451,7 @@ bash 3-gem5_topdown.sh
 # popd
 ```
 
-Step 4 run the Cache MPKI analysis script
+**Step 4**: run the Cache MPKI analysis script
 
 ```bash
 bash 4-gem5_cache.sh
@@ -472,7 +472,7 @@ bash 4-gem5_cache.sh
 
 ```
 
-Step 5 run the SPEC CPU score calculation script
+**Step 5**: run the SPEC CPU score calculation script
 
 ```bash
 bash 5-gem5_spec06_score.sh

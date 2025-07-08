@@ -13,10 +13,10 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [APPT
 
 | Time          | Topic                                       | Slides |
 | ------------- | ------------------------------------------- | ------ |
-| 09:45 - 10:20 | Introduction of the XiangShan Project | TBD |
-| 10:20 - 10:50 | Introduction to the XS-Gem5 simulator | TBD |
-| 11:15 - 11:35 | Brief Introduction of Microarchitecture Design | TBD |
-| 11:35 - 12:30 | XiangShan Development Tools | TBD |
+| 09:45 - 10:20 | Introduction of the XiangShan Project       | TBD |
+| 10:20 - 11:00 | Introduction to the XS-Gem5 simulator       | TBD |
+| 11:15 - 11:35 | Introduction of Microarchitecture Design    | TBD |
+| 11:35 - 12:30 | XiangShan Development Tools                 | TBD |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 
@@ -32,7 +32,7 @@ The major goal of the tutorial is to demonstrate how the XiangShan project can m
 
 Target audience includes researchers on architecture design, agile development, etc.
 
-<!-- We provide a quick-start environment for Xiangshan. See [StartUp](StartUp.md) page for details. -->
+We provide a quick-start environment for Xiangshan. See [StartUp](StartUp.md) page for details.
 
 ## To be covered
 
@@ -44,7 +44,7 @@ In June 2020, we launched XiangShan project. We have developed two major generat
 
 XS-GEM5 is an architecture simulator calibrated against the XiangShan RTL architecture, built on top of the open-source GEM5 framework. It supports full-system (FS) simulation and enables fast performance evaluation using RVGCpt. It enables us to perform fast design space exploration and parameter optimization of the XiangShan processor. We will also show an example of quickly adding a new feature to it.
 
-- Brief introduction to the microarchitecture and design concepts of XiangShan processor
+- Introduction to the microarchitecture and design concepts of XiangShan processor
 
 XiangShan is a superscalar out-of-order RISC-V processor with RV64GCBK ISA support. Vector and Hypervisor extensions are to be supported in the 3rd generation KMH. It features high-throughput frontend with advanced branch predictor, six-way aggressive out-of-order execution engine, high-bandwidth load/store unit and highly configurable cache system. Written in Chisel, a high-level hardware description language, XiangShan also achieves high readability and maintainability.
 
@@ -52,11 +52,11 @@ XiangShan is a superscalar out-of-order RISC-V processor with RV64GCBK ISA suppo
 
 We will introduce the development infrastructure of XiangShan processor, also known as the MinJie platform. MinJie is open sourced as well. It includes a series of tools that can accelerate the process of hardware development, functional verification, and performance evaluation. We will first talk about the principles and instructions of MinJie toolsets, and then demonstrate how to employ these tools to help quickly develop XiangShan processor.
 
-<!-- - Hands-on development with typical use cases on XiangShan and MinJie -->
+- Live demonstration with typical use cases on XiangShan and MinJie
 
-<!-- We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry. -->
+We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry.
 
-<!-- This tutorial's primary hands-on encompasses two parts: -->
+This tutorial's primary live demonstration encompasses two parts:
 
-<!-- - [Function Verification](FunctionVerification.md) -->
-<!-- - [Performance Verification](performance.md). -->
+- [Function Verification](FunctionVerification.md)
+- [Performance Verification](performance.md).

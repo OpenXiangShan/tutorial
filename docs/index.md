@@ -15,8 +15,7 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [APPT
 | ------------- | ------------------------------------------- | ------ |
 | 09:45 - 10:20 | Introduction of the XiangShan Project       | TBD |
 | 10:20 - 11:00 | Introduction to the XS-Gem5 simulator       | TBD |
-| 11:15 - 11:35 | Introduction of Microarchitecture Design    | TBD |
-| 11:35 - 12:30 | XiangShan Development Tools                 | TBD |
+| 11:15 - 12:30 | XiangShan Development Tools                 | TBD |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 
@@ -43,10 +42,6 @@ In June 2020, we launched XiangShan project. We have developed two major generat
 - Introduction to the XS-Gem5 Simulator
 
 XS-GEM5 is an architecture simulator calibrated against the XiangShan RTL architecture, built on top of the open-source GEM5 framework. It supports full-system (FS) simulation and enables fast performance evaluation using RVGCpt. It enables us to perform fast design space exploration and parameter optimization of the XiangShan processor. We will also show an example of quickly adding a new feature to it.
-
-- Introduction to the microarchitecture and design concepts of XiangShan processor
-
-XiangShan is a superscalar out-of-order RISC-V processor with RV64GCBK ISA support. Vector and Hypervisor extensions are to be supported in the 3rd generation KMH. It features high-throughput frontend with advanced branch predictor, six-way aggressive out-of-order execution engine, high-bandwidth load/store unit and highly configurable cache system. Written in Chisel, a high-level hardware description language, XiangShan also achieves high readability and maintainability.
 
 - Introduction to the infrastructures for XiangShan development
 

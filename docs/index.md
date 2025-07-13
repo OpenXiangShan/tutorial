@@ -9,7 +9,7 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [APPT
 
 **Time: Morning, Monday, July 14**
 
-**Location: TBD, [Athenaeum Intercontinental hotel, Athens, Greece](https://maps.google.com/?cid=8198452727479242910&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ)**
+**Location: Athenaeum Conference Centre III, [Athenaeum Intercontinental hotel, Athens, Greece](https://maps.google.com/?cid=8198452727479242910&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ)**
 
 | Time          | Topic                                       | Slides |
 | ------------- | ------------------------------------------- | ------ |

@@ -13,9 +13,9 @@ We are going to host half-day tutorials on XiangShan and MinJie during the [APPT
 
 | Time          | Topic                                       | Slides |
 | ------------- | ------------------------------------------- | ------ |
-| 09:45 - 10:20 | Introduction of the XiangShan Project       | TBD |
-| 10:20 - 11:00 | Introduction to the XS-Gem5 simulator       | TBD |
-| 11:15 - 12:30 | XiangShan Development Tools                 | TBD |
+| 09:45 - 10:20 | Introduction of the XiangShan Project       | [slides](./slides/20250714-1-APPT25-Introduction-XiangShan.pdf) |
+| 10:20 - 11:00 | Introduction to the XS-Gem5 simulator       | [slides](./slides/20250714-2-APPT25-GEM5-E.pdf) |
+| 11:15 - 12:30 | XiangShan Development Tools                 | [slides](./slides/20250714-4-APPT25-4-Dev-Tools.pdf) |
 
 ## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
 

@@ -1,5 +1,5 @@
 # doc for pdf plug-in: https://pypi.org/project/mkdocs-with-pdf/
-site_name: XiangShan Tutorial on ISCA 2025
+site_name: XiangShan Tutorial on RVSC 2025
 copyright: |
   <div>XiangShan Documents are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</div>
   <div>Copyright © 2025 The XiangShan Team</div>
@@ -7,7 +7,7 @@ copyright: |
 theme:
   name: material
   logo: figs/logo_title.svg
-  language: en
+  language: zh
   features:
   palette:
     # Palette toggle for light mode
@@ -50,7 +50,5 @@ markdown_extensions:
 plugins:
 
 nav:
-  - Home: index.md
-  - Start Up: StartUp.md
-  - Function Verification: FunctionVerification.md
-  - Performance Verification: performance.md
+  - 主页: index.md
+  - 启动: StartUp.md

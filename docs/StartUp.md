@@ -1,189 +1,118 @@
-# Start Up
+# 启动！
 
-## Online
+## 在线模式
 
-In this tutorial, we will provide access to cloud servers, prepare the XiangShan development environment for you, and go through the development workflows incluing simulation, function verification and performance verification. All you need is a computer with an Internet connection and `ssh` tools to do this!
+在本教程中，我们将提供云服务器的访问权限，为您准备好香山开发环境，并介绍包括仿真、功能验证和性能验证在内的开发工作流程。我们为演示服务器安装了 [Code-Server](https://github.com/coder/code-server) 您只需要一台装有浏览器的电脑即可参与。
 
-### Demo Instructions
+### 前置条件
 
-Shell commands are presented in boxes.
+登录到提供的云服务器。
 
-```shell
-echo "Hello, XiangShan"
-echo "Have a nice day" 
-```
+**服务器仅在教程期间可用。**
 
-Description and notes are presented in boxes with prefix `#`.
+1. 打开浏览器，访问 [https://xs.oscc.cc](https://xs.oscc.cc)。
+2. 打开 Terminal
 
-```shell
-# Please prepare a laptop with an SSH client.
-# Next, let's start the demo session！
-```
+    点击左侧的 `≡` 菜单，打开 `Terminal`，选择 `New Terminal`。
 
-### Prerequisites
+    ![codeserver_terminal.png](figs/codeserver_terminal.png)
 
-Login to the provided cloud server.
+3. 将 /opt/xs-env 复制到以你的名字命名的文件夹
 
-**The server is only available during the tutorial.**
+    假设你叫`zhangsan`，在Terminal中输入以下命令：
 
-Please open a Terminal and run the following commands.
+    ```bash
+    cp /opt/xs-env ~/zhangsan
+    ```
 
-* For Windows User, Windows Terminal with PowerShell is recommended
-* For Mac / Linux User, just open "Terminal".
+4. 打开属于你的文件夹的工作区
 
-```powershell
-ssh guest@t.xiangshan.cc
-# Password: xiangshan-2025
-```
+    点击左侧的 `≡` 菜单，打开 `File`，选择 `Open Folder`，然后选择刚才复制的文件夹。
 
-```shell
-# Copy tutorial environment to your dir based on your name
-cp -r /opt/xs-env ~/<YOUR_NAME>
+    ![codeserver_openfolder.png](figs/codeserver_openfolder.png)
 
-# Enter your dir
-cd ~/<YOUR_NAME>
+    !!! warning "注意"
+        在 code server 中，工作区之间没有隔离，请务必打开属于自己的文件夹再进行其他操作。
 
-# Set up environment variables
-# DO IT AGAIN when opening a new terminal
-source env.sh
+### 上手实践
 
-# SET XS_PROJECT_ROOT:                  /home/guest/YOUR_NAME
-# SET NOOP_HOME (XiangShan RTL Home):   $XS_PROJECT_ROOT/XiangShan 
-# SET NEMU_HOME:                        $XS_PROJECT_ROOT/NEMU 
-# SET AM_HOME:                          $XS_PROJECT_ROOT/nexus-am
-# SET TLT_HOME:                         $XS_PROJECT_ROOT/tl-test-new
-# SET gem5_home:                        $XS_PROJECT_ROOT/gem5
-```
+打开文件夹后，我们在左侧找到 `tutorial` 文件夹，找到 `01-first-run.ipynb` 文件，点击打开。
 
-```shell
-# Project Structure
-tree -d -L 1
-# .  
-# ├── DRAMsim3
-# ├── gem5
-# ├── NEMU 
-# ├── nexus-am 
-# ├── NutShell
-# ├── tl-test-new
-# ├── tutorial 
-# └── XiangShan
-  
-# Enter XiangShan directory
-cd XiangShan
-```
+跟着文件找到最后的运行仿真的代码块，点击运行。
 
-### Chisel Compilation
+![codeserver_terminal.png](figs/codeserver_terminal.png)
 
-#### Compile RTL and build simulator with Verilator
+如果你看到了 Hello, XiangShan! 的输出，恭喜你，你已经成功运行了香山的第一个仿真程序。
 
-Compilation might take ~20 mins.
+继续跟着后续的几个 `.ipynb` 文件结合 Slides 进行实践吧。
 
-```shell
-make emu -j4
+## 离线模式
 
-# Options: 
-# CONFIG=MinimalConfig  Configuration of XiangShan
-# EMU_THREADS=4         Simulation threads
-# EMU_TRACE=1           Enable waveform dump
-# WITH_DRAMSIM=1        Enable DRAMSim3 for DRAM simulation
-# WITH_CHISELDB = 1     Enable ChiselDB feature
-# WITH_CONSTANTIN = 1   Enable Constantin feature
-```
+如果您希望在自己的服务器上构建香山环境，请参考以下操作。
 
-#### Open Another Terminal
+请准备一台性能较高的服务器。以下是服务器的一些配置要求：
 
-```shell
-# login to the cloud server again
-ssh guest@t.xiangshan.cc
-# Password: xiangshan-2025
+* 操作系统：Ubuntu 22.04 LTS（其他版本尚未测试，不推荐使用。**注意：**与 Ubuntu 20.04 LTS 对应的香山环境已不再维护。）
+* CPU：不限。性能将决定编译和生成的速度。
+* 内存：至少 32G，推荐 64G 或更高。
+* 磁盘空间：20G 或更多。
+* 网络：请配置流畅的网络环境。
 
-# Enter your dir and set up
-cd ~/<YOUR_NAME> && source env.sh
+详细步骤请参考：[xs-env](https://docs.xiangshan.cc/zh-cn/latest/tools/xsenv/)
 
-# Enter tutorial for following operations
-cd tutorial
-```
+**步骤 1：** 下载 `riscv-gnu-toolchain`。
 
-#### Run RTL Simulation with Verilator
-
-After building, we can run the simulator.
-
-```shell
-# run pre-built simulator
-cd $XS_PROJECT_ROOT/tutorial/p1-basic-func
-./emu -i hello.bin --no-diff 2>hello.err
-
-# Some key options: 
--i.                         # Workload to run
--C / -I                     # Max cycles / Max Insts 
---diff=PATH / --no-diff     # Path of Reference Model / disable difftest
-```
-
-Great! We have learned the basic simulation process of Xiangshan.
-
-## Offline
-
-If you want to build the Xiangshan environment on your own server, please refer to the following operations.
-
-Please prepare a server with relatively high performance. The following are some configuration requirements for the server:
-
-* Operating system: Ubuntu 22.04 LTS (Other versions have not been tested and are not recommended. **NOTE:** the Xiangshan environment corresponding to Ubuntu 20.04 LTS is no longer maintained.)
-* CPU: Not limited. The performance will determine the speed of compilation and generation.
-* Memory: At least 32G. 64G or more is recommended.
-* Disk space: 20G or more.
-* Network: Please configure a smooth network environment.
-
-For detailed steps, please refer to: [xs-env](https://docs.xiangshan.cc/zh-cn/latest/tools/xsenv/)
-
-**Step 1:** download `riscv-gnu-toolchain`.
-
-Please refer to the [toolchain](https://docs.xiangshan.cc/zh-cn/latest/workloads/toolchain/) for details.
+详情请参考 [toolchain](https://docs.xiangshan.cc/zh-cn/latest/workloads/toolchain/)。
 
 ```bash
-# NOTE: please download the toolchain that is compatible with your environment. Here, I use Ubuntu 22.04.
+# 注意：请下载与您的环境兼容的工具链。这里以 Ubuntu 22.04 为例。
 wget https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2025.01.20/riscv64-glibc-ubuntu-22.04-gcc-nightly-2025.01.20-nightly.tar.xz
 wget https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2025.01.20/riscv64-elf-ubuntu-22.04-gcc-nightly-2025.01.20-nightly.tar.xz
 sudo tar -xJf riscv64-glibc-ubuntu-22.04-gcc-nightly-2025.01.20-nightly.tar.xz -C /opt
 sudo tar -xJf riscv64-elf-ubuntu-22.04-gcc-nightly-2025.01.20-nightly.tar.xz -C /opt
 
-# set environment variables
+# 设置环境变量
 vim ~/.bashrc
-# add `export PATH=/opt/riscv/bin:$PATH` to the end of the file.
+# 在文件末尾添加 `export PATH=/opt/riscv/bin:$PATH`。
 
-# update the environment variables
+# 更新环境变量
 source ~/.bashrc
-# check the status
+# 检查状态
 riscv64-unknown-linux-gnu-gcc --version
 riscv64-unknown-elf-gcc --version
 ```
 
-**Step 2:** clone the environment and install the tools.
+**步骤 2：** 克隆环境并安装工具。
 
 ```bash
-# clone xs-env
+# 克隆 xs-env
 git clone https://github.com/OpenXiangShan/xs-env
 cd xs-env
-git checkout isca2025-tutorial
-# use apt to install dependencies, you may modify it to use different pkg manager
+git checkout rvsc2025-tutorial
+# 使用 apt 安装依赖项，您可以根据需要修改为其他包管理器
 sudo -s ./setup-tools.sh
-# prepare tools, test develop env using a small project
+# 准备工具，使用一个小项目测试开发环境
 source setup.sh
 source env.sh
 ```
 
-**Step 3:** copy the attachments
+**步骤 3：** 复制附件
 
-Some of the pre-built programs in this step only work for Ubuntu-22.04.
-If you encountered any issue with other distributions, you can try to compile
-corresponding programs yourself.
+本步骤中的一些预构建程序仅适用于 Ubuntu-22.04。
+如果您在其他发行版中遇到问题，可以尝试自行编译相应的程序。
 
 ```bash
-cd $XS_PROJECT_ROOT/..
-wget https://github.com/OpenXiangShan/xs-env/releases/download/isca2025-tutorial/xs-env.tar.gz
-tar -xzf xs-env.tar.gz
+pushd $XS_PROJECT_ROOT/tutorial/xs-gem5/data
+wget https://github.com/OpenXiangShan/xs-env/releases/download/rvsc25-tutorial/gem5-data.tar.zstd
+tar -xvf gem5-data.tar.zstd
+popd
+pushd $XS_PROJECT_ROOT/tutorial/ready-to-run
+wget https://github.com/OpenXiangShan/xs-env/releases/download/rvsc2025-tutorial/ready-to-run.tar.gz
+tar -xvf ready-to-run.tar.gz
+popd
 ```
 
-**Step 4:** install the necessary Python libraries.
+**步骤 4：** 安装必要的 Python 库。
 
 ```bash
 pip install -r $NOOP_HOME/scripts/requirements.txt

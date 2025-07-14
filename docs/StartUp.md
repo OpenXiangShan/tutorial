@@ -40,7 +40,7 @@
 
 跟着文件找到最后的运行仿真的代码块，点击运行。
 
-![codeserver_terminal.png](figs/codeserver_terminal.png)
+![codeserver_exec.png](figs/codeserver_exec.png)
 
 如果你看到了 Hello, XiangShan! 的输出，恭喜你，你已经成功运行了香山的第一个仿真程序。
 

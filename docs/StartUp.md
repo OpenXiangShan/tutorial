@@ -22,7 +22,7 @@
     假设你叫`zhangsan`，在Terminal中输入以下命令：
 
     ```bash
-    cp /opt/xs-env ~/zhangsan
+    cp -r /opt/xs-env ~/zhangsan
     ```
 
 4. 打开属于你的文件夹的工作区

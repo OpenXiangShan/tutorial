@@ -38,22 +38,23 @@ In this tutorial, we will guide our audience how to setup and make customization
 
 ## Tutorial Contents
 
-- General introduction to the XiangShan project
+### General Introduction to the XiangShan Project
 
 In June 2020, we launched XiangShan project. We have developed three major generations of codenamed YQH, NH and KMH respectively. KMH V2 achieves a score of 15 in SPEC 2006, which has the highest performance among open-source RISC-V processors to the best of our knowledge. We are working on KMH V3, which targets at a score of 22 in SPEC 2006 at the end of 2026.
 
 XiangShan has been adopted by many companies from industry, including SpacemiT, Lanxin Computing, Innosilicon, etc. It has also been used in many academic research, which has been published in top conferences like MICRO and ISCA, etc.
 
-- Calibrated XS-GEM5 simulator for XiangShan processor and hands-on
+### Calibrated XS-GEM5 Simulator for XiangShan Processor and Hands-on
+
 XiangShan now has a calibrated software simulator XS-GEM5, as part of an integrated toolchain designed to support architecture exploration and development. We will demonstrate practical use cases of architectural exploration using XiangShan and XS-GEM5.
 
-- Microarchitecture design philosophy of XiangShan processor
+### Microarchitecture Design Philosophy of XiangShan Processor
 
 XiangShan is a superscalar out-of-order RISC-V processor with full support for RVA23 profile. It features high-throughput frontend with advanced branch predictor, six-way aggressive out-of-order execution engine, high-bandwidth load/store unit and highly configurable cache system.
 
 Instead of just giving a flat description of the microarchitecture of XiangShan, we will share our design philosophy and trade-offs in various aspects, hoping to provide insights for architecture researchers.
 
-- Introduction to the infrastructures for XiangShan development and hands-on
+### Introduction to the Infrastructures for XiangShan Development and Hands-on
 
 We will introduce the development infrastructure of XiangShan processor, also known as the MinJie platform, which is fully open-sourced. It includes a series of tools that can accelerate the process of hardware development, functional verification, and performance evaluation. We will first talk about the principles and instructions of MinJie toolsets, and then demonstrate how to employ these tools to help quickly develop XiangShan processor.
 

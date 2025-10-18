@@ -18,7 +18,7 @@ We are excited to host a tutorial on XiangShan at MICRO 2025! We look forward to
 In this tutorial, we're hosting a code-server for our participants. Here are steps to take part in the hands-on sessions:
 
 1. Open <https://t.xiangshan.cc> in your browser
-2. Enter password: TO BE DISCLOSED ON SITE
+2. Enter password: MICRO
 3. By default you should see a terminal
    - If not, click Menu (triple dashes) on the top-left corner, then "Terminal > New Terminal"
 4. Run `./start.sh` in the terminal

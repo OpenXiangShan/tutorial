@@ -1,5 +1,5 @@
 # doc for pdf plug-in: https://pypi.org/project/mkdocs-with-pdf/
-site_name: XiangShan Tutorial on RVSC 2025
+site_name: XiangShan Tutorial on MICRO 2025
 copyright: |
   <div>XiangShan Documents are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</div>
   <div>Copyright © 2025 The XiangShan Team</div>
@@ -50,5 +50,4 @@ markdown_extensions:
 plugins:
 
 nav:
-  - 主页: index.md
-  - 启动: StartUp.md
+  - Home: index.md

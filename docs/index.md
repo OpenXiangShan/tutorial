@@ -1,60 +1,60 @@
 # Tutorials at MICRO'25
 
-We are going to host half-day tutorials on XiangShan and MinJie during MICRO'25 in Seoul, South Korea on October 19, 2025.
+We are excited to host a tutorial on XiangShan at MICRO 2025! We look forward to seeing you at Astor (Lotte Hotel, 36F) on Sunday, October 19, 2025, from 8:00 AM to 12:00 PM.
+
 
 ## Agenda
 
-**Time: Morning, Sunday, October 19**
-
-| Time          | Topic                                            | Slides     |
-| ------------- | ------------------------------------------------ | ---------- |
-| 8:00 - 8:30   | General introduction                             | To be done |
-| 8:30 - 10:00  | Introduction of XS-Gem5 and hands-on             | To be done |
-| 10:00 - 10:30 | Coffee Break                                     |            |
-| 10:30 - 11:00 | Microarchitecture design philosophy of XiangShan | To be done |
-| 11:00 - 12:00 | Development workflows and hands-on               | To be done |
-
-
-
-## XiangShan: An Open Source High Performance RISC-V Processor and Infrastructure for Architecture Research
-
-Over the past decade, agile and open-source hardware has gained increasing attentions in both academia and industry. In 2019, the SIGARCH Visioning Workshop “Agile and Open Hardware for Next-Generation Computing” in conjunction with MICRO invited eleven experts to present their visions on this direction. We believe that open-source hardware design, and more importantly, free and open development infrastructure, has the opportunity to bring more convenience to architecture research and stimulate innovations.
-
-In this tutorial, we will present our efforts on the XiangShan project. XiangShan is an open-source, industry-competitive, high performance RISC-V processor. It has raised the performance ceiling of publicly accessible processors and set the competitive groundwork for future computer architecture research. Besides, we build an agile development platform called MinJie that integrates a broad set of development tools as infrastructure. We will demonstrate how XiangShan, together with MinJie, helps researchers realize their innovative ideas agilely and obtain convincing evaluation results. Our work was previously published at the MICRO’22 conference, selected as an IEEE Micro Top Pick from the 2022 Computer Architecture Conferences.
-
-The major goal of the tutorial is to demonstrate how the XiangShan project can make architecture research more convenient and solid. XiangShan has been developing on an agile hardware development platform called MinJie. We believe MinJie has the potential to become one of the most important infrastructures for computer architecture researchers. In this tutorial, we will guide audience how to setup and make customization or do research on XiangShan agilely and obtain accurate and convincing evaluation results.
-
-Target audience includes researchers on architecture design, agile development, etc.
-
-
-
-## To be covered
-
-- Introduction to the XiangShan project
-
-In June 2020, we launched XiangShan project. We have developed two major generations of codenamed YQH and NH respectively. The latest version of XiangShan processor achieves the highest performance of open-source RISC-V processors to the best of our knowledge. There is an on-going third generation called KMH targeting higher performance. We will also cover XiangShan tape-out status, performance evaluation, future roadmap, etc.
-
-- Introduction to the microarchitecture and design concepts of XiangShan processor
-
-XiangShan is a superscalar out-of-order RISC-V processor with RV64GCBK ISA support. Vector and Hypervisor extensions are to be supported in the 3rd generation KMH. It features high-throughput frontend with advanced branch predictor, six-way aggressive out-of-order execution engine, high-bandwidth load/store unit and highly configurable cache system. Written in Chisel, a high-level hardware description language, XiangShan also achieves high readability and maintainability.
-
-- Introduction to the infrastructures for XiangShan development
-
-We will introduce the development infrastructure of XiangShan processor, also known as the MinJie platform. MinJie is open sourced as well. It includes a series of tools that can accelerate the process of hardware development, functional verification, and performance evaluation. We will first talk about the principles and instructions of MinJie toolsets, and then demonstrate how to employ these tools to help quickly develop XiangShan processor.
-
-- Hands-on development with typical use cases on XiangShan and MinJie
-
-We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry.
+| Time          | Topic                                            | Slides          |
+| ------------- | ------------------------------------------------ | --------------- |
+| 8:00 - 8:30   | General introduction                             | To be disclosed |
+| 8:30 - 10:00  | Introduction of XS-Gem5 and hands-on             | To be disclosed |
+| 10:00 - 10:30 | Coffee Break                                     |                 |
+| 10:30 - 11:00 | Microarchitecture design philosophy of XiangShan | To be disclosed |
+| 11:00 - 12:00 | Development workflows and hands-on               | To be disclosed |
 
 ## Startup
 
-This time, we're hosting a code-server on demo server for guests, here are steps to take part:
+In this tutorial, we're hosting a code-server for our participants. Here are steps to take part in the hands-on sessions:
 
 1. Open <https://t.xiangshan.cc> in your browser
 2. Enter password: TO BE DISCLOSED ON SITE
 3. By default you should see a terminal
-   1. If not, click Menu (triple dashes) on the top-left corner, then "Terminal > New Terminal"
+   - If not, click Menu (triple dashes) on the top-left corner, then "Terminal > New Terminal"
 4. Run `./start.sh` in the terminal
-   1. This will create a unique random id for you, and create your workspace at `/data/${random}`
+   - This will create a unique random id for you, and create your workspace at `/data/${random}`
 5. When your workspace is created, it should be opened automatically
-   1. If not, click "Menu > File > Open Folder", enter `/data/${random}`, then click "OK"
+   - If not, click "Menu > File > Open Folder", enter `/data/${random}`, then click "OK"
+
+## XiangShan: An Open-Source High Performance RISC-V Processor and Infrastructure for Architecture Research
+
+Over the past decade, agile and open-source hardware has gained increasing attention in both academia and industry. In 2019, the SIGARCH Visioning Workshop “Agile and Open Hardware for Next-Generation Computing” in conjunction with MICRO invited eleven experts to present their visions on this direction. We believe that open-source hardware design, and more importantly, free and open development infrastructure, has the opportunity to bring more convenience to architecture research and stimulate innovations.
+
+A prominent example in this domain is XiangShan, an open-source, high-performance RISC-V processor that competes at an industrial level. Since its release in 2021, XiangShan has pushed the boundaries of publicly available processors and established a competitive foundation for future research in computer architecture. In this tutorial, we will share the latest advancements in XiangShan and the agile development platform MinJie, with special emphasis on XS-GEM5, a software simulator calibrated with XiangShan. We will also demonstrate how XiangShan and MinJie enable researchers agilely implement their ideas and obtain reliable evaluation results. Our work was previously published at the MICRO'22 conference, and was selected as an IEEE Micro Top Pick from the 2022 Computer Architecture Conferences.
+
+The major goal of the tutorial is to demonstrate how the XiangShan project can make architecture research more convenient and solid. XiangShan has been developing on an agile hardware development platform called MinJie. We believe MinJie has the potential to become one of the most important infrastructures for computer architecture researchers.
+
+In this tutorial, we will guide our audience how to setup and make customization or do research on XiangShan agilely and obtain accurate and convincing evaluation results. Targeted audience includes researchers on architecture design, agile development, etc.
+
+## Tutorial Contents
+
+- General introduction to the XiangShan project
+
+In June 2020, we launched XiangShan project. We have developed three major generations of codenamed YQH, NH and KMH respectively. KMH V2 achieves a score of 15 in SPEC 2006, which has the highest performance among open-source RISC-V processors to the best of our knowledge. We are working on KMH V3, which targets at a score of 22 in SPEC 2006 at the end of 2026.
+
+XiangShan has been adopted by many companies from industry, including SpacemiT, Lanxin Computing, Innosilicon, etc. It has also been used in many academic research, which has been published in top conferences like MICRO and ISCA, etc.
+
+- Calibrated XS-GEM5 simulator for XiangShan processor and hands-on
+XiangShan now has a calibrated software simulator XS-GEM5, as part of an integrated toolchain designed to support architecture exploration and development. We will demonstrate practical use cases of architectural exploration using XiangShan and XS-GEM5.
+
+- Microarchitecture design philosophy of XiangShan processor
+
+XiangShan is a superscalar out-of-order RISC-V processor with full support for RVA23 profile. It features high-throughput frontend with advanced branch predictor, six-way aggressive out-of-order execution engine, high-bandwidth load/store unit and highly configurable cache system.
+
+Instead of just giving a flat description of the microarchitecture of XiangShan, we will share our design philosophy and trade-offs in various aspects, hoping to provide insights for architecture researchers.
+
+- Introduction to the infrastructures for XiangShan development and hands-on
+
+We will introduce the development infrastructure of XiangShan processor, also known as the MinJie platform, which is fully open-sourced. It includes a series of tools that can accelerate the process of hardware development, functional verification, and performance evaluation. We will first talk about the principles and instructions of MinJie toolsets, and then demonstrate how to employ these tools to help quickly develop XiangShan processor.
+
+We have established a comprehensive workflow to simulate XiangShan processor and do prototype on FPGA. In this part, we will perform a practical demonstration, including argument details and key points to pay attention to. We will present some typical cases for XiangShan development. For example, how to add an instruction, how to add a peripheral device and how to re-configure cache structure. Based on XiangShan and Minjie platform, many architectural works can be reproduced and accelerate the interactions between academia and industry.

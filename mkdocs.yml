@@ -48,6 +48,10 @@ markdown_extensions:
   - def_list
 
 plugins:
+    - mkdocs-jupyter:
+        ignore_h1_titles: True
 
 nav:
   - Home: index.md
+  - Functional: functional.ipynb
+  - Performance: performance.ipynb

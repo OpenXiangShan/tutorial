@@ -5,13 +5,13 @@ We are excited to host a tutorial on XiangShan at MICRO 2025! We look forward to
 
 ## Agenda
 
-| Time          | Topic                                            | Slides                            |
-| ------------- | ------------------------------------------------ | --------------------------------- |
-| 8:00 - 8:30   | General introduction                             | [View](./slides/Introduction.pdf) |
-| 8:30 - 10:00  | Introduction of XS-Gem5 and hands-on             | [View](./slides/GEM5.pdf)         |
-| 10:00 - 10:30 | Coffee Break                                     |                                   |
-| 10:30 - 11:00 | Microarchitecture design philosophy of XiangShan | To be disclosed                   |
-| 11:00 - 12:00 | Development workflows and hands-on               | To be disclosed                   |
+| Time          | Topic                                            | Slides                                                                                                   |
+| ------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| 8:00 - 8:30   | General introduction                             | [View pdf](./slides/Introduction.pdf)                                                                    |
+| 8:30 - 10:00  | Introduction of XS-Gem5 and hands-on             | [View pdf](./slides/GEM5.pdf), [bootcamp](https://github.com/OpenXiangShan/bootcamp/tree/master/04-gem5) |
+| 10:00 - 10:30 | Coffee Break                                     |                                                                                                          |
+| 10:30 - 11:00 | Microarchitecture design philosophy of XiangShan | [View pdf](./slides/Microarchitecture%20Design%20Philosophy.pdf)                                         |
+| 11:00 - 12:00 | Development workflows and hands-on               | [bootcamp](https://github.com/OpenXiangShan/bootcamp)                                                    |
 
 ## Startup
 

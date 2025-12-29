@@ -1,8 +1,8 @@
 # doc for pdf plug-in: https://pypi.org/project/mkdocs-with-pdf/
-site_name: XiangShan Tutorial on MICRO 2025
+site_name: XiangShan Tutorial on HPCA 2026
 copyright: |
   <div>XiangShan Documents are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</div>
-  <div>Copyright © 2025 The XiangShan Team</div>
+  <div>Copyright © 2025-2026 The XiangShan Team</div>
 
 theme:
   name: material
@@ -53,5 +53,8 @@ plugins:
 
 nav:
   - Home: index.md
-  - Functional: functional.ipynb
-  - Performance: performance.ipynb
+  - Topic Details: topic_details.md
+  - Hands-on:
+    - Setup Instructions: hands_on/setup.md
+    - Notebook preview: hands_on/tutorial-en.ipynb
+    - bootcamp on GitHub: https://github.com/OpenXiangShan/bootcamp

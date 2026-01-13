@@ -22,7 +22,9 @@ Instead of just giving a flat description of the microarchitecture of XiangShan,
 ## Open-Source Tools and Open Problems in Agile Chip Development Infrastructure
 
 XiangShan is developed with the belief that agile development principles are essential for modern high-performance processor design, especially in an open-source setting.
+
 We will introduce the agile development workflow of XiangShan, including microarchitecture design, functional verification, and performance evaluation/exploration.
+
 We further discuss key challenges unique to agile hardware development of high-performance CPUs and highlight open research problems.
 
 - Overall chip development workflow

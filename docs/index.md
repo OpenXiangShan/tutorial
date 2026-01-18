@@ -7,8 +7,8 @@ We are excited to host a tutorial on XiangShan at HPCA 2026! We look forward to 
 We continue to optimize the tutorial content based on our latest progress and audience feedback from previous tutorials. Compared to our previous tutorial@MICRO'25, the highlights of this tutorial include:
 
 - The latest in-development KMH-V3 microarchitecture design philosophy, insights and design details.
-- A new, independent introduction to our Minjie (agile) development toolchain.
-- A invited talk on XSCC, a high-performance compiler optimized for RISC-V and XiangShan.
+- A new, independent introduction to our MinJie (agile) development toolchain.
+- An invited talk on XSCC, a high-performance compiler optimized for RISC-V and XiangShan.
 - A more thorough and easy-to-use hands-on part based on code-server and jupyter notebook.
 
 ## Agenda

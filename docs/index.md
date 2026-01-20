@@ -13,9 +13,9 @@ We continue to optimize the tutorial content based on our latest progress and au
 
 ## Agenda
 
-Location: Floor 3, Room C3.6, International Convention Centre Sydney
+Location: Room **Collaroy** (Floor 3, Room C3.6), International Convention Centre Sydney
 
-Time: Saturday, January 31, 2026, 08:45 - 12:45
+Time: **Saturday, January 31, 2026, 08:45 - 12:45**
 
 | Time          | Topic                                                                                                                                                                           | Slides                                                |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |

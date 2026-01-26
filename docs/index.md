@@ -8,20 +8,23 @@ We continue to optimize the tutorial content based on our latest progress and au
 
 - The latest in-development KMH-V3 microarchitecture design philosophy, insights and design details.
 - A new, independent introduction to our MinJie (agile) development toolchain.
-- An invited talk on XSCC, a high-performance compiler optimized for RISC-V and XiangShan.
+- Invited talks from our partners, on:
+    - XSCC, a high-performance compiler optimized for RISC-V and XiangShan, and
+    - Baiyang, a high-performance open-source DDR controller IP.
 - A more thorough and easy-to-use hands-on part based on code-server and jupyter notebook.
 
 ## Agenda
 
 Location: Room **Collaroy** (Floor 3, Room C3.6), International Convention Centre Sydney
 
-Time: **Saturday, January 31, 2026, 08:45 - 12:45**
+Time: **Saturday, January 31, 2026, 08:45 - 12:45** (GMT+11)
 
 | Time          | Topic                                                                                                                                                                           | Slides                                                |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| 08:45 - 09:20 | [Introduction](./topic_details.md#introduction)                                                                                                                                 | To be disclosed                                       |
-| 09:20 - 10:20 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan)                                                         | To be disclosed                                       |
-| 10:20 - 10:30 | [XSCC: A High-Performance Compiler for RISC-V](./topic_details.md#invited-talk-xscc-a-high-performance-compiler-for-risc-v)                                                     | To be disclosed                                       |
+| 08:45 - 09:15 | [Introduction](./topic_details.md#introduction)                                                                                                                                 | To be disclosed                                       |
+| 09:15 - 10:10 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan)                                                         | To be disclosed                                       |
+| 10:10 - 10:20 | [XSCC: A High-Performance Compiler for RISC-V](./topic_details.md#invited-talk-xscc-a-high-performance-compiler-for-risc-v)                                                     | To be disclosed                                       |
+| 10:20 - 10:30 | [Baiyang: High-Performance Open-Source DDR Controller IP](./topic_details.md#invited-talk-baiyang-high-performance-open-source-ddr-controller-ip)                               | To be disclosed                                       |
 | 10:30 - 11:00 | Coffee Break                                                                                                                                                                    | ☕                                                     |
 | 11:00 - 11:15 | [Open-Source Tools and Open Problems in Agile Chip Development Infrastructure](./topic_details.md#open-source-tools-and-open-problems-in-agile-chip-development-infrastructure) | To be disclosed                                       |
 | 11:15 - 11:55 | [XS-GEM5 and Hands-on](./topic_details.md#xs-gem5-and-hands-on)                                                                                                                 | To be disclosed                                       |
@@ -46,3 +49,13 @@ In the hands-on part of this tutorial, we will guide our audience to setup Xiang
 - [Hands-on Setup Instructions](./hands_on/setup.md)
     - [Notebook preview](./hands_on/tutorial-en.ipynb)
     - [bootcamp on GitHub](https://github.com/OpenXiangShan/bootcamp)
+
+## Other works from our team
+
+TraceRTL: Agile Performance Evaluation for Microarchitecture Exploration
+
+- Location: Room **Coogee** (Floor 3, Room C3.3), International Convention Centre Sydney
+- Time: **Tuesday, February 3, 2026, 14:50 - 15:10** (GMT+11)
+- Program: LLM Systems and Microarchitecture Tools
+- [View on HPCA'26 official website](https://2026.hpca-conf.org/details/hpca-2026-main-conference/27/TraceRTL-Agile-Performance-Evaluation-for-Microarchitecture-Exploration)
+- [View PDF](./slides/tracertl_hpca2026.pdf)

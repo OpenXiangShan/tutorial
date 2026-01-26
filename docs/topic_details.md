@@ -39,6 +39,14 @@ We're excited to have an invited talk from the XSCC team. In this session, they 
 - The overview of XSCC.
 - Key optimizations and current performance results of XSCC.
 
+## Invited Talk: "Baiyang: High-Performance Open-Source DDR Controller IP"
+
+We're also honored to have an invited talk from the Baiyang team. In this session, they will cover:
+
+- The parameter configurability and rich functionality of Baiyang IP.
+- The overview and design of Controller Modules.
+- The design and verification toolchain developed for Baiyang.
+
 ## XS-GEM5 and hands-on
 
 XiangShan now has a calibrated software simulator XS-GEM5, as part of an integrated toolchain designed to support architecture exploration and development. In this session, we will cover:

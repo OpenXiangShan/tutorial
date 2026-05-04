@@ -1,4 +1,4 @@
-# XiangShan Tutorial Topic Details @ HPCA'26
+# XiangShan Tutorial Topic Details @ ISCA'26
 
 ## Introduction
 

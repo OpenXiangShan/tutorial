@@ -1,4 +1,4 @@
-# XiangShan Tutorial Hands-on @ HPCA'26
+# XiangShan Tutorial Hands-on @ ISCA'26
 
 ## Setup Instructions
 

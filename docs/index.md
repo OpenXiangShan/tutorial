@@ -17,21 +17,23 @@ We continue to optimize the tutorial content based on our latest progress and au
 
 Location: Room 306A, Raleigh Convention Center, North Carolina, USA
 
-Time: **Sunday afternoon, June 28, 2026, 13:45 - 16:45**
+Time: **Sunday afternoon, June 28, 2026, 13:30 - 17:00**
 
 | Time          | Topic                                                                                                                                                                           | Slides                                                |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| 13:45 - 14:15 | [Introduction](./topic_details.md#introduction)                                                                                                                                 | [PDF](./slides/Introduction.pdf)                      |
-| 14:15 - 15:10 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan)                                                         | [PDF](./slides/Microarchitecture.pdf)                 |
-| 15:10 - 15:20 | [XSCC: A High-Performance Compiler for RISC-V](./topic_details.md#invited-talk-xscc-a-high-performance-compiler-for-risc-v)                                                     | [PDF](./slides/XSCC.pdf)                              |
-| 15:20 - 15:30 | [Baiyang: High-Performance Open-Source DDR Controller IP](./topic_details.md#invited-talk-baiyang-high-performance-open-source-ddr-controller-ip)                               | [PDF](./slides/Baiyang.pdf)                           |
+| 13:30 - 14:00 | [Introduction](./topic_details.md#introduction)                                                                                                                                 | [PDF](./slides/Introduction.pdf)                      |
+| 14:00 - 14:40 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan)                                                         | [PDF](./slides/Microarchitecture.pdf)                 |
+| 14:40 - 15:10 | XSAI: A XiangShan fork for AI workloads                                                                                                                                         | To be done                                            |
+| 15:10 - 15:30 | [Baiyang: High-Performance Open-Source DDR Controller IP](./topic_details.md#invited-talk-baiyang-high-performance-open-source-ddr-controller-ip)                               | [PDF](./slides/Baiyang.pdf)                           |
 | 15:30 - 16:00 | Coffee Break                                                                                                                                                                    | ☕                                                     |
-| 16:00 - 16:15 | [Open-Source Tools and Open Problems in Agile Chip Development Infrastructure](./topic_details.md#open-source-tools-and-open-problems-in-agile-chip-development-infrastructure) | [PDF](./slides/Infra.pdf)                             |
-| 16:15 - 16:55 | [XS-GEM5 and Hands-on](./topic_details.md#xs-gem5-and-hands-on)                                                                                                                 | [PDF](./slides/GEM5.pdf)                              |
-| 16:55 - 17:45 | [Development Workflows and Hands-on](./topic_details.md#development-workflows-and-hands-on)                                                                                     | [bootcamp](https://github.com/OpenXiangShan/bootcamp) |
+| 16:00 - 16:30 | [XS-GEM5 and Hands-on](./topic_details.md#xs-gem5-and-hands-on)                                                                                                                 | [PDF](./slides/GEM5.pdf)                              |
+| 16:30 - 17:00 | [Development Workflows and Hands-on](./topic_details.md#development-workflows-and-hands-on)                                                                                     | [bootcamp](https://github.com/OpenXiangShan/bootcamp) |
 
-- This program is tentative and subject to change.
 - There will be QA sessions at the end of each topic, this is included in the time slots above.
+- Also note that we're in early prepare stage, so:
+  - This program is tentative and subject to change.
+  - Currently, slides are inherited from HPCA'26, we'll update them later
+
 
 ## Overview
 

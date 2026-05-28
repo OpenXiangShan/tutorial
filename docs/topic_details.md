@@ -31,13 +31,13 @@ We further discuss key challenges unique to agile hardware development of high-p
 - Tools and methodologies used in the XiangShan project
 - Open research problems
 
-## Invited Talk: "XSCC: A High-Performance Compiler for RISC-V"
+## Invited Talk: "XSAI: From XiangShan to an AI-Ready CPU"
 
-We're excited to have an invited talk from the XSCC team. In this session, they will introduce:
+We're excited to have an invited talk from the XSAI team. In this session, they will introduce:
 
-- The motivation and challenges in developing a high-performance compiler for RISC-V.
-- The overview of XSCC.
-- Key optimizations and current performance results of XSCC.
+- The motivation of evolving from AI accelerators to AI-ready CPUs.
+- The application scenarios of XSAI.
+- Key architectural designs of XSAI, such as high-bandwidth L2 cache and asynchronous matrix execution.
 
 ## Invited Talk: "Baiyang: High-Performance Open-Source DDR Controller IP"
 

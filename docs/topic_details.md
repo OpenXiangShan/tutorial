@@ -31,21 +31,13 @@ We further discuss key challenges unique to agile hardware development of high-p
 - Tools and methodologies used in the XiangShan project
 - Open research problems
 
-## Invited Talk: "XSAI: From XiangShan to an AI-Ready CPU"
+## XSAI: From XiangShan to an AI-Ready CPU
 
-We're excited to have an invited talk from the XSAI team. In this session, they will introduce:
+We'll introduce our XSAI project (first published at RVSC'25), which is a unified microarchitecture for general-purpose and AI-inference uses. In this session, we will cover:
 
 - The motivation of evolving from AI accelerators to AI-ready CPUs.
 - The application scenarios of XSAI.
 - Key architectural designs of XSAI, such as high-bandwidth L2 cache and asynchronous matrix execution.
-
-## Invited Talk: "Baiyang: High-Performance Open-Source DDR Controller IP"
-
-We're also honored to have an invited talk from the Baiyang team. In this session, they will cover:
-
-- The parameter configurability and rich functionality of Baiyang IP.
-- The overview and design of Controller Modules.
-- The design and verification toolchain developed for Baiyang.
 
 ## XS-GEM5 and hands-on
 

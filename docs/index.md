@@ -4,14 +4,10 @@ We are excited to host a tutorial on XiangShan at ISCA 2026! We look forward to 
 
 ## Highlights
 
-We continue to optimize the tutorial content based on our latest progress and audience feedback from previous tutorials. Compared to our previous tutorial@MICRO'25, the highlights of this tutorial include:
+We continue to optimize the tutorial content based on our latest progress and audience feedback from previous tutorials. Compared to our previous tutorial@HPCA'26, the highlights of this tutorial include:
 
 - The latest in-development KMH-V3 microarchitecture design philosophy, insights and design details.
-- A new, independent introduction to our MinJie (agile) development toolchain.
-- Invited talks from our partners, on:
-    - XSCC, a high-performance compiler optimized for RISC-V and XiangShan, and
-    - Baiyang, a high-performance open-source DDR controller IP.
-- A more thorough and easy-to-use hands-on part based on code-server and jupyter notebook.
+- The introduction and latest progress of our XSAI project, which is a unified microarchitecture for general-purpose and AI-inference uses.
 
 ## Agenda
 
@@ -19,15 +15,14 @@ Location: Room 306A, Raleigh Convention Center, North Carolina, USA
 
 Time: **Sunday afternoon, June 28, 2026, 13:30 - 17:00**
 
-| Time          | Topic                                                                                                                                                                           | Slides                                                |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| 13:30 - 14:00 | [Introduction](./topic_details.md#introduction)                                                                                                                                 | [PDF](./slides/Introduction.pdf)                      |
-| 14:00 - 14:40 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan)                                                         | [PDF](./slides/Microarchitecture.pdf)                 |
-| 14:40 - 15:10 | XSAI: From XiangShan to an AI-Ready CPU                                                                                                                                         | To be done                                            |
-| 15:10 - 15:30 | [Baiyang: High-Performance Open-Source DDR Controller IP](./topic_details.md#invited-talk-baiyang-high-performance-open-source-ddr-controller-ip)                               | [PDF](./slides/Baiyang.pdf)                           |
-| 15:30 - 16:00 | Coffee Break                                                                                                                                                                    | ☕                                                     |
-| 16:00 - 16:30 | [XS-GEM5 and Hands-on](./topic_details.md#xs-gem5-and-hands-on)                                                                                                                 | [PDF](./slides/GEM5.pdf)                              |
-| 16:30 - 17:00 | [Development Workflows and Hands-on](./topic_details.md#development-workflows-and-hands-on)                                                                                     | [bootcamp](https://github.com/OpenXiangShan/bootcamp) |
+| Time          | Topic                                                                                                                   | Slides                                                |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| 13:30 - 14:00 | [Introduction](./topic_details.md#introduction)                                                                         | [PDF](./slides/Introduction.pdf)                      |
+| 14:00 - 14:50 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan) | [PDF](./slides/Microarchitecture.pdf)                 |
+| 14:50 - 15:30 | [XSAI: From XiangShan to an AI-Ready CPU](./topic_details.md#xsai-from-xiangshan-to-an-ai-ready-cpu)                    | To be done                                            |
+| 15:30 - 16:00 | Coffee Break                                                                                                            | ☕                                                     |
+| 16:00 - 16:30 | [XS-GEM5 and Hands-on](./topic_details.md#xs-gem5-and-hands-on)                                                         | [PDF](./slides/GEM5.pdf)                              |
+| 16:30 - 17:00 | [Development Workflows and Hands-on](./topic_details.md#development-workflows-and-hands-on)                             | [bootcamp](https://github.com/OpenXiangShan/bootcamp) |
 
 - There will be QA sessions at the end of each topic, this is included in the time slots above.
 - Also note that we're in early prepare stage, so:

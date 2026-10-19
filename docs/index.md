@@ -1,61 +1,67 @@
-# XiangShan Tutorial @ HPCA'26
+# Tutorials @ 2026 RISC-V 中国峰会
 
-We are excited to host a tutorial on XiangShan at HPCA 2026! We look forward to seeing you at ICC, Sydney on Saturday, January 31, 2026.
+我们将在 [2026 RISC-V 中国峰会](https://riscv-summit-china.org/) 的同期活动香山生态大会与香山开发者大会上举办一个关于香山处理器与对应GEM5模拟器的开发工具与敏捷验证的教程。香山开发者大会将于10月20日上午09:00在[深圳市会展中心（福田）](https://j.map.baidu.com/34/06) 6层桂花厅举行。
 
-## Highlights
-
-We continue to optimize the tutorial content based on our latest progress and audience feedback from previous tutorials. Compared to our previous tutorial@MICRO'25, the highlights of this tutorial include:
-
-- The latest in-development KMH-V3 microarchitecture design philosophy, insights and design details.
-- A new, independent introduction to our MinJie (agile) development toolchain.
-- Invited talks from our partners, on:
-    - XSCC, a high-performance compiler optimized for RISC-V and XiangShan, and
-    - Baiyang, a high-performance open-source DDR controller IP.
-- A more thorough and easy-to-use hands-on part based on code-server and jupyter notebook.
+如果你正在现场参与本次活动，请从 [启动！](topic_details.md) 页面开始。
 
 ## Agenda
 
-Location: Room **Collaroy** (Floor 3, Room C3.6), International Convention Centre Sydney
+**时间: 09:00, 星期二, 10月20日** （具体时间以现场安排为准）
 
-Time: **Saturday, January 31, 2026, 08:45 - 12:45** (GMT+11)
+**地点: 深圳市会展中心（福田）6层桂花厅**
 
-| Time          | Topic                                                                                                                                                                           | Slides                                                |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| 08:45 - 09:15 | [Introduction](./topic_details.md#introduction)                                                                                                                                 | [PDF](./slides/Introduction.pdf)                      |
-| 09:15 - 10:10 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan)                                                         | [PDF](./slides/Microarchitecture.pdf)                 |
-| 10:10 - 10:20 | [XSCC: A High-Performance Compiler for RISC-V](./topic_details.md#invited-talk-xscc-a-high-performance-compiler-for-risc-v)                                                     | [PDF](./slides/XSCC.pdf)                              |
-| 10:20 - 10:30 | [Baiyang: High-Performance Open-Source DDR Controller IP](./topic_details.md#invited-talk-baiyang-high-performance-open-source-ddr-controller-ip)                               | [PDF](./slides/Baiyang.pdf)                           |
-| 10:30 - 11:00 | Coffee Break                                                                                                                                                                    | ☕                                                     |
-| 11:00 - 11:15 | [Open-Source Tools and Open Problems in Agile Chip Development Infrastructure](./topic_details.md#open-source-tools-and-open-problems-in-agile-chip-development-infrastructure) | [PDF](./slides/Infra.pdf)                             |
-| 11:15 - 11:55 | [XS-GEM5 and Hands-on](./topic_details.md#xs-gem5-and-hands-on)                                                                                                                 | [PDF](./slides/GEM5.pdf)                              |
-| 11:55 - 12:45 | [Development Workflows and Hands-on](./topic_details.md#development-workflows-and-hands-on)                                                                                     | [bootcamp](https://github.com/OpenXiangShan/bootcamp) |
+| 时间          | 香山开发者大会议程                            |
+| ------------- | ------------------------------------------- |
+| 09:00 - 09:10 | 嘉宾致辞                                     |
+| 09:10 - 09:40 | 开源社区年度建设报告 & 颁奖典礼               |
+| 09:40 - 10:40 | 相关报告                                    |
+| 10:40 - 11:00 | XS-GEM5开发流程与上手实践                     |
+| 11:00 - 11:50 | 香山处理器敏捷开发工具与上手实践               |
+| 11:50 - 12:00 | 交流讨论                                     |
+| 12:00 - 12:15 | XSAI开发流程介绍                              |
 
-- This program is tentative and subject to change, see [HPCA's official website](https://2026.hpca-conf.org/program/program-hpca-2026/) for the latest updates.
-- There will be QA sessions at the end of each topic, this is included in the time slots above.
+| 时间          | 香山生态大会议程                            |
+| ------------- | ------------------------------------------- |
+| 13:30 - 14:20 | RISC-V：十二年认知之路与十年趋势展望            |
+| 14:20 - 14:50 | “如意”RISC-V原生社区：构建AI时代的基础软件新生态 |
+| 14:50 - 15:20 | 以开源铸根：智能体时代的RISC-V+AI·OS根技术体系与开源生态 |
+| 15:20 - 15:30 | 开源芯片社区成立发布                          |
+| 15:30 - 17:30 | 相关报告                                     |
 
-## Overview
+## XiangShan：面向架构研究的开源高性能 RISC-V 处理器与基础设施
 
-Over the past decade, agile and open-source hardware has gained increasing attention in both academia and industry. In 2019, the SIGARCH Visioning Workshop “Agile and Open Hardware for Next-Generation Computing” in conjunction with MICRO invited eleven experts to present their visions on this direction. We believe that open-source hardware design, and more importantly, free and open development infrastructure, has the opportunity to bring more convenience to architecture research and stimulate innovations.
+过去十年，敏捷开源硬件在学术界和工业界都日益受到关注。2019 年，SIGARCH 愿景研讨会“面向下一代计算的敏捷开源硬件”与 ISCA 联合举办，邀请了 11 位专家就此方向发表各自的看法。我们相信，开源硬件设计，更重要的是，免费开放的开发基础设施，有机会为架构研究带来更多便利，并激发创新。
 
-A prominent example in this domain is XiangShan, an open-source, high-performance RISC-V processor that competes at an industrial level. Since its release in 2021, XiangShan has pushed the boundaries of publicly available processors and established a competitive foundation for future research in computer architecture. In this tutorial, we will share the latest advancements in XiangShan and the agile development platform MinJie, with special emphasis on XS-GEM5, a software simulator calibrated with XiangShan. We will also demonstrate how XiangShan and MinJie enable researchers agilely implement their ideas and obtain reliable evaluation results. Our work was previously published at the MICRO'22 conference, and was selected as an IEEE Micro Top Pick from the 2022 Computer Architecture Conferences.
+在本次 Tutorial 中，我们将介绍我们在 XiangShan 项目上的成果。XiangShan 是一款开源、具有行业竞争力的高性能 RISC-V 处理器。它突破了公共处理器的性能上限，并为未来的计算机架构研究奠定了竞争基础。此外，我们还构建了一个名为 MinJie 的敏捷开发平台，该平台集成了丰富的开发工具作为基础设施。我们将展示 XiangShan 如何与 Minjie 携手，帮助研究人员敏捷地实现他们的创新想法并获得令人信服的评估结果。我们的研究成果此前已在 MICRO’22 会议上发表，并被评为 2022 年计算机体系结构会议的 IEEE Micro Top Pick。
 
-The major goal of the tutorial is to demonstrate how the XiangShan project can make architecture research more convenient and solid. XiangShan has been developing on an agile hardware development platform called MinJie. We believe MinJie has the potential to become one of the most important infrastructures for computer architecture researchers.
+![](figs/icemountain.svg)
 
-In the hands-on part of this tutorial, we will guide our audience to setup XiangShan and make customization, to do research on XiangShan or XS-GEM5 agilely, and to obtain accurate and convincing evaluation results. Targeted audience includes researchers on architecture design, agile development, etc.
+本教程的主要目标是展示香山项目如何使架构研究更加便捷和扎实。香山一直在名为“MinJie”的敏捷硬件开发平台上进行开发。我们相信“MinJie”有潜力成为计算机架构研究人员最重要的基础设施之一。在本教程中，我们将指导读者如何在香山上进行敏捷设置、定制或研究，并获得准确且令人信服的评估结果。
 
-## Next Steps
+![](figs/doublecircle.svg)
 
-- [Topic details](./topic_details.md)
-- [Hands-on Setup Instructions](./hands_on/setup.md)
-    - [Notebook preview](./hands_on/tutorial-en.ipynb)
-    - [bootcamp on GitHub](https://github.com/OpenXiangShan/bootcamp)
+目标受众包括架构设计、敏捷开发等领域的研究人员。
 
-## Other works from our team
+我们为 XiangShan 提供了一个快速启动环境。有关详细信息，请参阅 [StartUp](StartUp.md) 页面。
 
-TraceRTL: Agile Performance Evaluation for Microarchitecture Exploration
+## 我们将介绍
 
-- Location: Room **Coogee** (Floor 3, Room C3.3), International Convention Centre Sydney
-- Time: **Tuesday, February 3, 2026, 14:50 - 15:10** (GMT+11)
-- Program: LLM Systems and Microarchitecture Tools
-- [View on HPCA'26 official website](https://2026.hpca-conf.org/details/hpca-2026-main-conference/27/TraceRTL-Agile-Performance-Evaluation-for-Microarchitecture-Exploration)
-- [View PDF](./slides/tracertl_hpca2026.pdf)
+- 香山项目简介
+
+2020年6月，我们启动了香山项目。我们已经开发了两代处理器，分别代号为雁栖湖和南湖。目前最新版本的香山处理器在我们所知范围内达到了开源 RISC-V 处理器的最高性能。我们正在开发第三代处理器，代号为昆明湖，目标是实现更高的性能。我们还将介绍香山的流片状态、性能评估以及未来的路线图等内容。
+
+- XS-Gem5 模拟器简介
+
+XS-GEM5 是一个基于开源 GEM5 框架构建的架构模拟器，与香山 RTL 架构进行了校准。它支持全系统（FS）模拟，并通过 RVGCpt 实现快速性能评估。它使我们能够快速进行设计空间探索和参数优化。我们还将展示一个快速添加新功能的示例。
+
+- 香山处理器的微架构与设计理念简介
+
+香山是一款支持 RV64GCBK 指令集的超标量乱序执行 RISC-V 处理器。第三代 KMH 将支持向量扩展和虚拟化扩展。它具有高吞吐量的前端，配备先进的分支预测器、八路激进的乱序执行引擎、高带宽的加载/存储单元以及高度可配置的缓存系统。香山使用高级硬件描述语言 Chisel 编写，具有高可读性和可维护性。
+
+- 香山开发基础设施简介
+
+我们将介绍香山处理器的开发基础设施，也称为 MinJie 平台。MinJie 是开源的，包含一系列工具，可以加速硬件开发、功能验证和性能评估的过程。我们将首先介绍 MinJie 工具集的原理和使用说明，然后演示如何利用这些工具快速开发香山处理器。
+
+- 基于香山和 MinJie 的典型用例实践
+
+我们已经建立了一套完整的工作流程，用于模拟香山处理器并在 FPGA 上进行原型验证。在这一部分，我们将进行实际演示，包括参数细节和需要注意的关键点。我们将展示一些香山开发的典型案例，例如如何添加一条指令、如何添加一个外设设备以及如何重新配置缓存结构。基于香山和 MinJie 平台，许多架构研究工作可以被复现，并加速学术界与工业界的互动。

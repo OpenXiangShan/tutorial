@@ -19,7 +19,7 @@ Time: **Sunday afternoon, June 28, 2026, 13:30 - 17:00**
 | ------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | 13:30 - 14:00 | [Introduction](./topic_details.md#introduction)                                                                         | [PDF](./slides/Introduction.pdf)                      |
 | 14:00 - 14:50 | [Microarchitecture Design Philosophy of XiangShan](./topic_details.md#microarchitecture-design-philosophy-of-xiangshan) | [PDF](./slides/Microarchitecture.pdf)                 |
-| 14:50 - 15:30 | [XSAI: From XiangShan to an AI-Ready CPU](./topic_details.md#xsai-from-xiangshan-to-an-ai-ready-cpu)                    | To be done                                            |
+| 14:50 - 15:30 | [XSAI: From XiangShan to an AI-Ready CPU](./topic_details.md#xsai-from-xiangshan-to-an-ai-ready-cpu)                    | [PDF](./slides/XSAI.pdf)                              |
 | 15:30 - 16:00 | Coffee Break                                                                                                            | ☕                                                     |
 | 16:00 - 16:30 | [XS-GEM5 and Hands-on](./topic_details.md#xs-gem5-and-hands-on)                                                         | [PDF](./slides/GEM5.pdf)                              |
 | 16:30 - 17:00 | [Development Workflows and Hands-on](./topic_details.md#development-workflows-and-hands-on)                             | [bootcamp](https://github.com/OpenXiangShan/bootcamp) |
